@@ -79,5 +79,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="CapaEntidad\CapaEntidad.csproj">
+      <Project>{7427638d-11cb-4a94-96d9-17e93bedaeda}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="CapaLogicaNegocio\CapaLogicaNegocio.csproj">
+      <Project>{04e64d2a-7c11-4d7d-bd28-5fe9da13bf0a}</Project>
+      <Name>CapaLogicaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
