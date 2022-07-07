@@ -42,6 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="datMuebleTerminado.cs" />
+    <Compile Include="datPedido.cs" />
+    <Compile Include="datPersonalProduccion.cs" />
+    <Compile Include="datProcesoMantenimiento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

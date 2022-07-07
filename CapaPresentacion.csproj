@@ -52,10 +52,46 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="MuebleTerminado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuebleTerminado.Designer.cs">
+      <DependentUpon>MuebleTerminado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedido.Designer.cs">
+      <DependentUpon>Pedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonalProduccion.Designer.cs">
+      <DependentUpon>PersonalProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcesoMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcesoMantenimiento.Designer.cs">
+      <DependentUpon>ProcesoMantenimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuebleTerminado.resx">
+      <DependentUpon>MuebleTerminado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedido.resx">
+      <DependentUpon>Pedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonalProduccion.resx">
+      <DependentUpon>PersonalProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcesoMantenimiento.resx">
+      <DependentUpon>ProcesoMantenimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
