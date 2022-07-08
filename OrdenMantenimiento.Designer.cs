@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoMOANSO
 {
-    partial class ProcesoMantenimiento
+    partial class OrdenMantenimiento
     {
         /// <summary>
         /// Required designer variable.

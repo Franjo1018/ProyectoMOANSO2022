@@ -30,12 +30,8 @@ namespace ProyectoMOANSO
         private void InitializeComponent()
         {
             this.groupBoxDatos = new System.Windows.Forms.GroupBox();
-            this.cbkEstadoMueble = new System.Windows.Forms.CheckBox();
-            this.dtPickerRegMueble = new System.Windows.Forms.DateTimePicker();
             this.txtPlanoMueble = new System.Windows.Forms.TextBox();
-            this.txtTipoMueble = new System.Windows.Forms.TextBox();
             this.txtCodigoMueble = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,22 +39,27 @@ namespace ProyectoMOANSO
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnDesabilitar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvMueble = new System.Windows.Forms.DataGridView();
+            this.cmbTipoTinte = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtColor = new System.Windows.Forms.TextBox();
             this.groupBoxDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMueble)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxDatos
             // 
-            this.groupBoxDatos.Controls.Add(this.cbkEstadoMueble);
-            this.groupBoxDatos.Controls.Add(this.dtPickerRegMueble);
-            this.groupBoxDatos.Controls.Add(this.txtPlanoMueble);
-            this.groupBoxDatos.Controls.Add(this.txtTipoMueble);
-            this.groupBoxDatos.Controls.Add(this.txtCodigoMueble);
+            this.groupBoxDatos.Controls.Add(this.txtColor);
             this.groupBoxDatos.Controls.Add(this.label5);
+            this.groupBoxDatos.Controls.Add(this.txtDescripcion);
+            this.groupBoxDatos.Controls.Add(this.label4);
+            this.groupBoxDatos.Controls.Add(this.cmbTipoTinte);
+            this.groupBoxDatos.Controls.Add(this.txtPlanoMueble);
+            this.groupBoxDatos.Controls.Add(this.txtCodigoMueble);
             this.groupBoxDatos.Controls.Add(this.label3);
             this.groupBoxDatos.Controls.Add(this.label2);
             this.groupBoxDatos.Controls.Add(this.label1);
@@ -67,62 +68,29 @@ namespace ProyectoMOANSO
             this.groupBoxDatos.Controls.Add(this.btnModificar);
             this.groupBoxDatos.Location = new System.Drawing.Point(34, 180);
             this.groupBoxDatos.Name = "groupBoxDatos";
-            this.groupBoxDatos.Size = new System.Drawing.Size(655, 180);
+            this.groupBoxDatos.Size = new System.Drawing.Size(400, 180);
             this.groupBoxDatos.TabIndex = 14;
             this.groupBoxDatos.TabStop = false;
             this.groupBoxDatos.Text = "datos del mueble";
             // 
-            // cbkEstadoMueble
-            // 
-            this.cbkEstadoMueble.AutoSize = true;
-            this.cbkEstadoMueble.Location = new System.Drawing.Point(379, 41);
-            this.cbkEstadoMueble.Name = "cbkEstadoMueble";
-            this.cbkEstadoMueble.Size = new System.Drawing.Size(110, 17);
-            this.cbkEstadoMueble.TabIndex = 18;
-            this.cbkEstadoMueble.Text = "estado de mueble";
-            this.cbkEstadoMueble.UseVisualStyleBackColor = true;
-            // 
-            // dtPickerRegMueble
-            // 
-            this.dtPickerRegMueble.Location = new System.Drawing.Point(119, 137);
-            this.dtPickerRegMueble.Name = "dtPickerRegMueble";
-            this.dtPickerRegMueble.Size = new System.Drawing.Size(200, 20);
-            this.dtPickerRegMueble.TabIndex = 17;
-            // 
             // txtPlanoMueble
             // 
-            this.txtPlanoMueble.Location = new System.Drawing.Point(73, 99);
+            this.txtPlanoMueble.Location = new System.Drawing.Point(46, 106);
             this.txtPlanoMueble.Name = "txtPlanoMueble";
-            this.txtPlanoMueble.Size = new System.Drawing.Size(265, 20);
+            this.txtPlanoMueble.Size = new System.Drawing.Size(59, 20);
             this.txtPlanoMueble.TabIndex = 15;
-            // 
-            // txtTipoMueble
-            // 
-            this.txtTipoMueble.Location = new System.Drawing.Point(96, 69);
-            this.txtTipoMueble.Name = "txtTipoMueble";
-            this.txtTipoMueble.Size = new System.Drawing.Size(242, 20);
-            this.txtTipoMueble.TabIndex = 14;
             // 
             // txtCodigoMueble
             // 
-            this.txtCodigoMueble.Location = new System.Drawing.Point(119, 39);
+            this.txtCodigoMueble.Location = new System.Drawing.Point(90, 29);
             this.txtCodigoMueble.Name = "txtCodigoMueble";
-            this.txtCodigoMueble.Size = new System.Drawing.Size(219, 20);
+            this.txtCodigoMueble.Size = new System.Drawing.Size(44, 20);
             this.txtCodigoMueble.TabIndex = 13;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 137);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "fecha de registro";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 99);
+            this.label3.Location = new System.Drawing.Point(6, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 10;
@@ -131,16 +99,16 @@ namespace ProyectoMOANSO
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 72);
+            this.label2.Location = new System.Drawing.Point(6, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Tipo Mueble";
+            this.label2.Text = "Tipo Tinte";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 43);
+            this.label1.Location = new System.Drawing.Point(6, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 8;
@@ -148,7 +116,7 @@ namespace ProyectoMOANSO
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(574, 22);
+            this.btnAgregar.Location = new System.Drawing.Point(228, 19);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 5;
@@ -158,7 +126,7 @@ namespace ProyectoMOANSO
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(574, 109);
+            this.btnCancelar.Location = new System.Drawing.Point(319, 59);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 7;
@@ -168,7 +136,7 @@ namespace ProyectoMOANSO
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(574, 62);
+            this.btnModificar.Location = new System.Drawing.Point(319, 19);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 6;
@@ -178,7 +146,7 @@ namespace ProyectoMOANSO
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(691, 151);
+            this.btnSalir.Location = new System.Drawing.Point(501, 199);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 13;
@@ -186,19 +154,9 @@ namespace ProyectoMOANSO
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnDesabilitar
-            // 
-            this.btnDesabilitar.Location = new System.Drawing.Point(691, 105);
-            this.btnDesabilitar.Name = "btnDesabilitar";
-            this.btnDesabilitar.Size = new System.Drawing.Size(75, 23);
-            this.btnDesabilitar.TabIndex = 12;
-            this.btnDesabilitar.Text = "desabilitar";
-            this.btnDesabilitar.UseVisualStyleBackColor = true;
-            this.btnDesabilitar.Click += new System.EventHandler(this.btnDesabilitar_Click);
-            // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(691, 63);
+            this.btnEditar.Location = new System.Drawing.Point(501, 151);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 11;
@@ -208,7 +166,7 @@ namespace ProyectoMOANSO
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(691, 24);
+            this.btnNuevo.Location = new System.Drawing.Point(501, 112);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
             this.btnNuevo.TabIndex = 10;
@@ -222,18 +180,58 @@ namespace ProyectoMOANSO
             this.dgvMueble.Location = new System.Drawing.Point(34, 24);
             this.dgvMueble.Name = "dgvMueble";
             this.dgvMueble.ReadOnly = true;
-            this.dgvMueble.Size = new System.Drawing.Size(618, 150);
+            this.dgvMueble.Size = new System.Drawing.Size(422, 150);
             this.dgvMueble.TabIndex = 9;
             this.dgvMueble.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMueble_CellClick);
+            // 
+            // cmbTipoTinte
+            // 
+            this.cmbTipoTinte.FormattingEnabled = true;
+            this.cmbTipoTinte.Location = new System.Drawing.Point(67, 69);
+            this.cmbTipoTinte.Name = "cmbTipoTinte";
+            this.cmbTipoTinte.Size = new System.Drawing.Size(121, 21);
+            this.cmbTipoTinte.TabIndex = 18;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 147);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Color";
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(270, 106);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(113, 54);
+            this.txtDescripcion.TabIndex = 20;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(201, 109);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 13);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Descripcion";
+            // 
+            // txtColor
+            // 
+            this.txtColor.Location = new System.Drawing.Point(43, 144);
+            this.txtColor.Name = "txtColor";
+            this.txtColor.Size = new System.Drawing.Size(59, 20);
+            this.txtColor.TabIndex = 22;
             // 
             // MuebleTerminado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 372);
+            this.ClientSize = new System.Drawing.Size(613, 372);
             this.Controls.Add(this.groupBoxDatos);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnDesabilitar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dgvMueble);
@@ -249,12 +247,8 @@ namespace ProyectoMOANSO
         #endregion
 
         private System.Windows.Forms.GroupBox groupBoxDatos;
-        private System.Windows.Forms.CheckBox cbkEstadoMueble;
-        private System.Windows.Forms.DateTimePicker dtPickerRegMueble;
         private System.Windows.Forms.TextBox txtPlanoMueble;
-        private System.Windows.Forms.TextBox txtTipoMueble;
         private System.Windows.Forms.TextBox txtCodigoMueble;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -262,9 +256,13 @@ namespace ProyectoMOANSO
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnDesabilitar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.DataGridView dgvMueble;
+        private System.Windows.Forms.TextBox txtColor;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbTipoTinte;
     }
 }

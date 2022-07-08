@@ -39,10 +39,7 @@ namespace ProyectoMOANSO
             try
             {
                 entPersonalProduccion c = new entPersonalProduccion();
-                c.puesto = txtPuesto.Text.Trim();
-                c.tipoPersonal = txtTipoPersonal.Text.Trim();
-                c.nombre = txtNombre.Text.Trim();
-                c.fecRegIngreso = dtPickerRegIngreso.Value;
+                
                 logPersonalProduccion.Instancia.InsertarPersonalProduccion(c);
             }
             catch (Exception ex)
@@ -56,8 +53,7 @@ namespace ProyectoMOANSO
 
         private void LimpiarVariables()
         {
-            txtTipoPersonal.Text = "";
-            txtPuesto.Text = " ";
+            
             txtNombre.Text = " ";
         }
 
@@ -70,10 +66,7 @@ namespace ProyectoMOANSO
         {
             DataGridViewRow filaActual = dgvPersonal.Rows[e.RowIndex]; //
             txtCodigoPersonal.Text = filaActual.Cells[0].Value.ToString();
-            txtPuesto.Text = filaActual.Cells[1].Value.ToString();
-            txtTipoPersonal.Text = filaActual.Cells[2].Value.ToString();
-            txtNombre.Text = filaActual.Cells[3].Value.ToString();
-            dtPickerRegIngreso.Text = filaActual.Cells[4].Value.ToString();
+           
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -89,10 +82,7 @@ namespace ProyectoMOANSO
             {
                 entPersonalProduccion c = new entPersonalProduccion();
                 c.codigoPersonal = int.Parse(txtCodigoPersonal.Text.Trim());
-                c.puesto = txtPuesto.Text.Trim();
-                c.tipoPersonal = txtTipoPersonal.Text.Trim();
-                c.nombre = txtNombre.Text.Trim();
-                c.fecRegIngreso = dtPickerRegIngreso.Value;
+                
                 logPersonalProduccion.Instancia.InsertarPersonalProduccion(c);
             }
             catch (Exception ex)

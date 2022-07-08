@@ -13,9 +13,9 @@ using CapaEntidad;
 
 namespace ProyectoMOANSO
 {
-    public partial class ProcesoMantenimiento : Form
+    public partial class OrdenMantenimiento : Form
     {
-        public ProcesoMantenimiento()
+        public OrdenMantenimiento()
         {
             InitializeComponent();
             listarProcesoMantenimiento();

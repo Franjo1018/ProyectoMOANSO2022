@@ -29,10 +29,13 @@ namespace ProyectoMOANSO
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBoxDatos = new System.Windows.Forms.GroupBox();
-            this.dtPickerRegTermino = new System.Windows.Forms.DateTimePicker();
-            this.txtNombreCliente = new System.Windows.Forms.TextBox();
-            this.txtTipoPedido = new System.Windows.Forms.TextBox();
+            this.gbDatosPedido = new System.Windows.Forms.GroupBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.dtPickerRegPedido = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtPickerRegSolicitada = new System.Windows.Forms.DateTimePicker();
+            this.txtIDCliente = new System.Windows.Forms.TextBox();
             this.txtCodigoPedido = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,88 +49,115 @@ namespace ProyectoMOANSO
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvPedido = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dtPickerRegInicio = new System.Windows.Forms.DateTimePicker();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.groupBoxDatos.SuspendLayout();
+            this.cmbTipoPedido = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.gbDatosPedido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBoxDatos
+            // gbDatosPedido
             // 
-            this.groupBoxDatos.Controls.Add(this.txtDescripcion);
-            this.groupBoxDatos.Controls.Add(this.dtPickerRegInicio);
-            this.groupBoxDatos.Controls.Add(this.label6);
-            this.groupBoxDatos.Controls.Add(this.label4);
-            this.groupBoxDatos.Controls.Add(this.dtPickerRegTermino);
-            this.groupBoxDatos.Controls.Add(this.txtNombreCliente);
-            this.groupBoxDatos.Controls.Add(this.txtTipoPedido);
-            this.groupBoxDatos.Controls.Add(this.txtCodigoPedido);
-            this.groupBoxDatos.Controls.Add(this.label5);
-            this.groupBoxDatos.Controls.Add(this.label3);
-            this.groupBoxDatos.Controls.Add(this.label2);
-            this.groupBoxDatos.Controls.Add(this.label1);
-            this.groupBoxDatos.Controls.Add(this.btnAgregar);
-            this.groupBoxDatos.Controls.Add(this.btnCancelar);
-            this.groupBoxDatos.Controls.Add(this.btnModificar);
-            this.groupBoxDatos.Location = new System.Drawing.Point(26, 177);
-            this.groupBoxDatos.Name = "groupBoxDatos";
-            this.groupBoxDatos.Size = new System.Drawing.Size(655, 180);
-            this.groupBoxDatos.TabIndex = 20;
-            this.groupBoxDatos.TabStop = false;
-            this.groupBoxDatos.Text = "datos del pedido";
+            this.gbDatosPedido.Controls.Add(this.txtCantidad);
+            this.gbDatosPedido.Controls.Add(this.label7);
+            this.gbDatosPedido.Controls.Add(this.cmbTipoPedido);
+            this.gbDatosPedido.Controls.Add(this.txtDescripcion);
+            this.gbDatosPedido.Controls.Add(this.dtPickerRegPedido);
+            this.gbDatosPedido.Controls.Add(this.label6);
+            this.gbDatosPedido.Controls.Add(this.label4);
+            this.gbDatosPedido.Controls.Add(this.dtPickerRegSolicitada);
+            this.gbDatosPedido.Controls.Add(this.txtIDCliente);
+            this.gbDatosPedido.Controls.Add(this.txtCodigoPedido);
+            this.gbDatosPedido.Controls.Add(this.label5);
+            this.gbDatosPedido.Controls.Add(this.label3);
+            this.gbDatosPedido.Controls.Add(this.label2);
+            this.gbDatosPedido.Controls.Add(this.label1);
+            this.gbDatosPedido.Controls.Add(this.btnAgregar);
+            this.gbDatosPedido.Controls.Add(this.btnCancelar);
+            this.gbDatosPedido.Controls.Add(this.btnModificar);
+            this.gbDatosPedido.Location = new System.Drawing.Point(26, 177);
+            this.gbDatosPedido.Name = "gbDatosPedido";
+            this.gbDatosPedido.Size = new System.Drawing.Size(655, 180);
+            this.gbDatosPedido.TabIndex = 20;
+            this.gbDatosPedido.TabStop = false;
+            this.gbDatosPedido.Text = "datos del pedido";
             // 
-            // dtPickerRegTermino
+            // txtDescripcion
             // 
-            this.dtPickerRegTermino.Location = new System.Drawing.Point(358, 123);
-            this.dtPickerRegTermino.Name = "dtPickerRegTermino";
-            this.dtPickerRegTermino.Size = new System.Drawing.Size(200, 20);
-            this.dtPickerRegTermino.TabIndex = 17;
+            this.txtDescripcion.Location = new System.Drawing.Point(86, 111);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(204, 63);
+            this.txtDescripcion.TabIndex = 21;
             // 
-            // txtNombreCliente
+            // dtPickerRegPedido
             // 
-            this.txtNombreCliente.Location = new System.Drawing.Point(119, 99);
-            this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(219, 20);
-            this.txtNombreCliente.TabIndex = 15;
+            this.dtPickerRegPedido.Location = new System.Drawing.Point(318, 41);
+            this.dtPickerRegPedido.Name = "dtPickerRegPedido";
+            this.dtPickerRegPedido.Size = new System.Drawing.Size(200, 20);
+            this.dtPickerRegPedido.TabIndex = 20;
             // 
-            // txtTipoPedido
+            // label6
             // 
-            this.txtTipoPedido.Location = new System.Drawing.Point(96, 69);
-            this.txtTipoPedido.Name = "txtTipoPedido";
-            this.txtTipoPedido.Size = new System.Drawing.Size(242, 20);
-            this.txtTipoPedido.TabIndex = 14;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(315, 77);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 13);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Fecha Solicitada";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 126);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Descripcion";
+            // 
+            // dtPickerRegSolicitada
+            // 
+            this.dtPickerRegSolicitada.Location = new System.Drawing.Point(318, 103);
+            this.dtPickerRegSolicitada.Name = "dtPickerRegSolicitada";
+            this.dtPickerRegSolicitada.Size = new System.Drawing.Size(200, 20);
+            this.dtPickerRegSolicitada.TabIndex = 17;
+            // 
+            // txtIDCliente
+            // 
+            this.txtIDCliente.Location = new System.Drawing.Point(75, 83);
+            this.txtIDCliente.Name = "txtIDCliente";
+            this.txtIDCliente.Size = new System.Drawing.Size(52, 20);
+            this.txtIDCliente.TabIndex = 15;
             // 
             // txtCodigoPedido
             // 
-            this.txtCodigoPedido.Location = new System.Drawing.Point(119, 39);
+            this.txtCodigoPedido.Location = new System.Drawing.Point(99, 28);
             this.txtCodigoPedido.Name = "txtCodigoPedido";
-            this.txtCodigoPedido.Size = new System.Drawing.Size(219, 20);
+            this.txtCodigoPedido.Size = new System.Drawing.Size(63, 20);
             this.txtCodigoPedido.TabIndex = 13;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(355, 39);
+            this.label5.Location = new System.Drawing.Point(315, 19);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 13);
+            this.label5.Size = new System.Drawing.Size(73, 13);
             this.label5.TabIndex = 12;
-            this.label5.Text = "fecha de inicio";
+            this.label5.Text = "Fecha Pedido";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 99);
+            this.label3.Location = new System.Drawing.Point(17, 88);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 13);
+            this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Nombre del cliente";
+            this.label3.Text = "ID cliente";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 72);
+            this.label2.Location = new System.Drawing.Point(17, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 9;
@@ -136,7 +166,7 @@ namespace ProyectoMOANSO
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 43);
+            this.label1.Location = new System.Drawing.Point(17, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 8;
@@ -214,44 +244,36 @@ namespace ProyectoMOANSO
             this.dgvPedido.Size = new System.Drawing.Size(618, 150);
             this.dgvPedido.TabIndex = 15;
             // 
-            // label4
+            // cmbTipoPedido
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 133);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "descripcion";
+            this.cmbTipoPedido.FormattingEnabled = true;
+            this.cmbTipoPedido.Location = new System.Drawing.Point(87, 58);
+            this.cmbTipoPedido.Name = "cmbTipoPedido";
+            this.cmbTipoPedido.Size = new System.Drawing.Size(121, 21);
+            this.cmbTipoPedido.TabIndex = 22;
             // 
-            // label6
+            // label7
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(355, 97);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 13);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "fecha de termino";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(172, 88);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 13);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Cantidad";
             // 
-            // dtPickerRegInicio
+            // txtCantidad
             // 
-            this.dtPickerRegInicio.Location = new System.Drawing.Point(358, 61);
-            this.dtPickerRegInicio.Name = "dtPickerRegInicio";
-            this.dtPickerRegInicio.Size = new System.Drawing.Size(200, 20);
-            this.dtPickerRegInicio.TabIndex = 20;
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(96, 130);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(242, 20);
-            this.txtDescripcion.TabIndex = 21;
+            this.txtCantidad.Location = new System.Drawing.Point(227, 83);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(52, 20);
+            this.txtCantidad.TabIndex = 24;
             // 
             // Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 369);
-            this.Controls.Add(this.groupBoxDatos);
+            this.Controls.Add(this.gbDatosPedido);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnDesabilitar);
             this.Controls.Add(this.btnEditar);
@@ -259,8 +281,8 @@ namespace ProyectoMOANSO
             this.Controls.Add(this.dgvPedido);
             this.Name = "Pedido";
             this.Text = "Pedido";
-            this.groupBoxDatos.ResumeLayout(false);
-            this.groupBoxDatos.PerformLayout();
+            this.gbDatosPedido.ResumeLayout(false);
+            this.gbDatosPedido.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).EndInit();
             this.ResumeLayout(false);
 
@@ -268,10 +290,9 @@ namespace ProyectoMOANSO
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBoxDatos;
-        private System.Windows.Forms.DateTimePicker dtPickerRegTermino;
-        private System.Windows.Forms.TextBox txtNombreCliente;
-        private System.Windows.Forms.TextBox txtTipoPedido;
+        private System.Windows.Forms.GroupBox gbDatosPedido;
+        private System.Windows.Forms.DateTimePicker dtPickerRegSolicitada;
+        private System.Windows.Forms.TextBox txtIDCliente;
         private System.Windows.Forms.TextBox txtCodigoPedido;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
@@ -285,9 +306,12 @@ namespace ProyectoMOANSO
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.DataGridView dgvPedido;
-        private System.Windows.Forms.DateTimePicker dtPickerRegInicio;
+        private System.Windows.Forms.DateTimePicker dtPickerRegPedido;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbTipoPedido;
     }
 }

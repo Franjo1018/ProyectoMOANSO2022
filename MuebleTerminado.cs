@@ -42,10 +42,7 @@ namespace ProyectoMOANSO
             try
             {
                 entMuebleTerminado c = new entMuebleTerminado();
-                c.tipoMueble = txtTipoMueble.Text.Trim();
-                c.planoMueble = txtPlanoMueble.Text.Trim();
-                c.fecRegMueble = dtPickerRegMueble.Value;
-                c.estadoMueble = cbkEstadoMueble.Checked;
+                
                 logMuebleTerminado.Instancia.InsertarMuebleTerminado(c);
             }
             catch (Exception ex)
@@ -59,8 +56,7 @@ namespace ProyectoMOANSO
 
         private void LimpiarVariables()
         {
-            txtTipoMueble.Text = "";
-            txtPlanoMueble.Text = " ";
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -71,11 +67,7 @@ namespace ProyectoMOANSO
         private void dgvMueble_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow filaActual = dgvMueble.Rows[e.RowIndex]; //
-            txtCodigoMueble.Text = filaActual.Cells[0].Value.ToString();
-            txtTipoMueble.Text = filaActual.Cells[1].Value.ToString();
-            txtPlanoMueble.Text = filaActual.Cells[2].Value.ToString();
-            dtPickerRegMueble.Text = filaActual.Cells[3].Value.ToString();
-            cbkEstadoMueble.Checked = Convert.ToBoolean(filaActual.Cells[4].Value);
+            
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -91,10 +83,7 @@ namespace ProyectoMOANSO
             {
                 entMuebleTerminado c = new entMuebleTerminado();
                 c.codigoMueble = int.Parse(txtCodigoMueble.Text.Trim());
-                c.tipoMueble = txtTipoMueble.Text.Trim();
-                c.planoMueble = txtPlanoMueble.Text.Trim();
-                c.fecRegMueble = dtPickerRegMueble.Value;
-                c.estadoMueble = cbkEstadoMueble.Checked;
+                
                 logMuebleTerminado.Instancia.InsertarMuebleTerminado(c);
             }
             catch (Exception ex)
@@ -118,8 +107,7 @@ namespace ProyectoMOANSO
                 entMuebleTerminado c = new entMuebleTerminado();
 
                 c.codigoMueble = int.Parse(txtCodigoMueble.Text.Trim());
-                cbkEstadoMueble.Checked = false;
-                c.estadoMueble = cbkEstadoMueble.Checked;
+                
                 logMuebleTerminado.Instancia.DeshabilitarMuebleTerminado(c);
             }
             catch (Exception ex)

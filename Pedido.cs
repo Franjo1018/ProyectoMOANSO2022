@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using CapaLogicaNegocio;
 using CapaEntidad;
 
@@ -19,7 +18,7 @@ namespace ProyectoMOANSO
         {
             InitializeComponent();
             listarPedido();
-            groupBoxDatos.Enabled = false;
+            gbDatosPedido.Enabled = false;
             txtCodigoPedido.Enabled = false;
         }
 
@@ -30,7 +29,7 @@ namespace ProyectoMOANSO
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            groupBoxDatos.Enabled = true;
+            gbDatosPedido.Enabled = true;
             btnAgregar.Visible = true;
             LimpiarVariables();
             btnModificar.Visible = false;
@@ -42,11 +41,11 @@ namespace ProyectoMOANSO
             try
             {
                 entPedido c = new entPedido();
-                c.tipoPedido = txtTipoPedido.Text.Trim();
-                c.nombrecliente = txtNombreCliente.Text.Trim();
+               
+                c.nombrecliente = txtIDCliente.Text.Trim();
                 c.descripcion = txtDescripcion.Text.Trim();
-                c.fecRegInicio = dtPickerRegInicio.Value;
-                c.fecRegTermino = dtPickerRegTermino.Value;
+                c.fecRegInicio = dtPickerRegPedido.Value;
+                c.fecRegTermino = dtPickerRegSolicitada.Value;
                 logPedido.Instancia.InsertarPedido(c);
             }
             catch (Exception ex)
@@ -54,14 +53,14 @@ namespace ProyectoMOANSO
                 MessageBox.Show("Error.." + ex);
             }
             LimpiarVariables();
-            groupBoxDatos.Enabled = false;
+            gbDatosPedido.Enabled = false;
             listarPedido();
         }
 
         private void LimpiarVariables()
         {
-            txtTipoPedido.Text = "";
-            txtNombreCliente.Text = " ";
+            
+            txtIDCliente.Text = " ";
             txtDescripcion.Text = " ";
         }
 
@@ -74,16 +73,16 @@ namespace ProyectoMOANSO
         {
             DataGridViewRow filaActual = dgvPedido.Rows[e.RowIndex]; //
             txtCodigoPedido.Text = filaActual.Cells[0].Value.ToString();
-            txtTipoPedido.Text = filaActual.Cells[1].Value.ToString();
-            txtNombreCliente.Text = filaActual.Cells[2].Value.ToString();
+           
+            txtIDCliente.Text = filaActual.Cells[2].Value.ToString();
             txtDescripcion.Text = filaActual.Cells[3].Value.ToString();
-            dtPickerRegInicio.Text = filaActual.Cells[4].Value.ToString();
-            dtPickerRegTermino.Text = filaActual.Cells[5].Value.ToString();
+            dtPickerRegPedido.Text = filaActual.Cells[4].Value.ToString();
+            dtPickerRegSolicitada.Text = filaActual.Cells[5].Value.ToString();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            groupBoxDatos.Enabled = true;
+            gbDatosPedido.Enabled = true;
             btnModificar.Visible = true;
             btnAgregar.Visible = false;
         }
@@ -94,11 +93,11 @@ namespace ProyectoMOANSO
             {
                 entPedido c = new entPedido();
                 c.codigoPedido = int.Parse(txtCodigoPedido.Text.Trim());
-                c.tipoPedido = txtTipoPedido.Text.Trim();
-                c.nombrecliente = txtNombreCliente.Text.Trim();
+               
+                c.nombrecliente = txtIDCliente.Text.Trim();
                 c.descripcion = txtDescripcion.Text.Trim();
-                c.fecRegInicio = dtPickerRegInicio.Value;
-                c.fecRegTermino = dtPickerRegTermino.Value;
+                c.fecRegInicio = dtPickerRegPedido.Value;
+                c.fecRegTermino = dtPickerRegSolicitada.Value;
                 logPedido.Instancia.InsertarPedido(c);
             }
             catch (Exception ex)
@@ -106,7 +105,7 @@ namespace ProyectoMOANSO
                 MessageBox.Show("Error.." + ex);
             }
             LimpiarVariables();
-            groupBoxDatos.Enabled = false;
+            gbDatosPedido.Enabled = false;
             listarPedido();
         }
 
@@ -129,7 +128,7 @@ namespace ProyectoMOANSO
                 MessageBox.Show("Error.." + ex);
             }
             LimpiarVariables();
-            groupBoxDatos.Enabled = false;
+            gbDatosPedido.Enabled = false;
             listarPedido();
         }
     }
