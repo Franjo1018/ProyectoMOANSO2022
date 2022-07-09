@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-
 using CapaEntidad;
+
 namespace CapaDatos
 {
     public class datPedido
@@ -38,12 +38,14 @@ namespace CapaDatos
                 while (dr.Read())
                 {
                     entPedido Ped = new entPedido();
-                    Ped.codigoPedido = Convert.ToInt32(dr["codigoPedido"]);
-                    Ped.tipoPedido = dr["tipoPedido"].ToString();
-                    Ped.nombrecliente = dr["nombreCliente"].ToString();
-                    Ped.descripcion = dr["descripcion"].ToString();
-                    Ped.fecRegInicio = Convert.ToDateTime(dr["fecRegInicio"]);
-                    Ped.fecRegTermino = Convert.ToDateTime(dr["fecRegTermino"]);
+                    Ped.cantidad = Convert.ToInt32(dr["Cantidad"]);
+                    Ped.descripcion = dr["Descripcion"].ToString();
+                    Ped.estado_pedido = Convert.ToInt32(dr["Estado_pedido"]);
+                    Ped.fecRegPedido = Convert.ToDateTime(dr["Fecha_pedido"]);
+                    Ped.fecRegSolicitada = Convert.ToDateTime(dr["Fecha_solicitada"]);
+                    Ped.pedidoID = Convert.ToInt32(dr["PedidoID"]);
+                    Ped.clienteID = Convert.ToInt32(dr["ClienteID"]);
+                    Ped.tipoPedidoID= Convert.ToInt32(dr["TipopedidoID"]);
 
                     lista.Add(Ped);
                 }
@@ -60,7 +62,7 @@ namespace CapaDatos
             return lista;
         }
 
-        //inserta pedido
+        //inserta pedido/
         public Boolean InsertarPedido(entPedido Ped)
         {
             SqlCommand cmd = null;
@@ -68,13 +70,16 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarPedido", cn);
+                cmd = new SqlCommand("spInsertaPedido", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@tipoPedido", Ped.tipoPedido);
-                cmd.Parameters.AddWithValue("@nombreCliente", Ped.nombrecliente);
-                cmd.Parameters.AddWithValue("@descripcion", Ped.descripcion);
-                cmd.Parameters.AddWithValue("@fecRegInicio", Ped.fecRegInicio);
-                cmd.Parameters.AddWithValue("@fecRegTermino", Ped.fecRegTermino);
+                cmd.Parameters.AddWithValue("@Cantidad", Ped.cantidad);
+                cmd.Parameters.AddWithValue("@Descripcion", Ped.descripcion);
+                cmd.Parameters.AddWithValue("@Estado_pedido", Ped.estado_pedido);
+                cmd.Parameters.AddWithValue("@Fecha_pedido", Ped.fecRegPedido);
+                cmd.Parameters.AddWithValue("@Fecha_solicitada", Ped.fecRegSolicitada);
+                cmd.Parameters.AddWithValue("@ClienteID", Ped.clienteID);
+                cmd.Parameters.AddWithValue("@TipopedidoID", Ped.tipoPedidoID);
+                cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
                 {
@@ -90,23 +95,25 @@ namespace CapaDatos
         }
 
 
-        //edita Pedble
+        ////edita Pedble
 
-        public Boolean EditarPedido(entPedido Ped)
+        public Boolean EditaPedido(entPedido Ped)
         {
             SqlCommand cmd = null;
             Boolean edita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarPedido", cn);
+                cmd = new SqlCommand("spEditaPedido", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@codigoPedido", Ped.codigoPedido);
-                cmd.Parameters.AddWithValue("@tipoPedido", Ped.tipoPedido);
-                cmd.Parameters.AddWithValue("@nombreCliente", Ped.nombrecliente);
-                cmd.Parameters.AddWithValue("@descripcion", Ped.descripcion);
-                cmd.Parameters.AddWithValue("@fecRegInicio", Ped.fecRegInicio);
-                cmd.Parameters.AddWithValue("@fecRegTermino", Ped.fecRegTermino);
+                cmd.Parameters.AddWithValue("@Cantidad", Ped.cantidad);
+                cmd.Parameters.AddWithValue("@Descripcion", Ped.descripcion);
+                cmd.Parameters.AddWithValue("@Estado_pedido", Ped.estado_pedido);
+                cmd.Parameters.AddWithValue("@Fecha_pedido", Ped.fecRegPedido);
+                cmd.Parameters.AddWithValue("@Fecha_solicitada", Ped.fecRegSolicitada);
+                cmd.Parameters.AddWithValue("PedidoID", Ped.pedidoID);
+                cmd.Parameters.AddWithValue("@ClienteID", Ped.clienteID);
+                cmd.Parameters.AddWithValue("@TipopedidoID", Ped.tipoPedidoID);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -133,7 +140,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spDeshabilitarPedido", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@codigoPedido", Ped.codigoPedido);
+                cmd.Parameters.AddWithValue("@PedidoID", Ped.pedidoID);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

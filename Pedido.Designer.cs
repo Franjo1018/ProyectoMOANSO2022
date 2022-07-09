@@ -30,12 +30,17 @@ namespace ProyectoMOANSO
         private void InitializeComponent()
         {
             this.gbDatosPedido = new System.Windows.Forms.GroupBox();
+            this.txtEstadoPedido = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbClienteID = new System.Windows.Forms.ComboBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbTipoPedido = new System.Windows.Forms.ComboBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.dtPickerRegPedido = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dtPickerRegSolicitada = new System.Windows.Forms.DateTimePicker();
-            this.txtIDCliente = new System.Windows.Forms.TextBox();
             this.txtCodigoPedido = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,17 +52,17 @@ namespace ProyectoMOANSO
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnDesabilitar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnNuevoPedido = new System.Windows.Forms.Button();
             this.dgvPedido = new System.Windows.Forms.DataGridView();
-            this.cmbTipoPedido = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.gbDatosPedido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatosPedido
             // 
+            this.gbDatosPedido.Controls.Add(this.txtEstadoPedido);
+            this.gbDatosPedido.Controls.Add(this.label8);
+            this.gbDatosPedido.Controls.Add(this.cmbClienteID);
             this.gbDatosPedido.Controls.Add(this.txtCantidad);
             this.gbDatosPedido.Controls.Add(this.label7);
             this.gbDatosPedido.Controls.Add(this.cmbTipoPedido);
@@ -66,7 +71,6 @@ namespace ProyectoMOANSO
             this.gbDatosPedido.Controls.Add(this.label6);
             this.gbDatosPedido.Controls.Add(this.label4);
             this.gbDatosPedido.Controls.Add(this.dtPickerRegSolicitada);
-            this.gbDatosPedido.Controls.Add(this.txtIDCliente);
             this.gbDatosPedido.Controls.Add(this.txtCodigoPedido);
             this.gbDatosPedido.Controls.Add(this.label5);
             this.gbDatosPedido.Controls.Add(this.label3);
@@ -75,19 +79,66 @@ namespace ProyectoMOANSO
             this.gbDatosPedido.Controls.Add(this.btnAgregar);
             this.gbDatosPedido.Controls.Add(this.btnCancelar);
             this.gbDatosPedido.Controls.Add(this.btnModificar);
-            this.gbDatosPedido.Location = new System.Drawing.Point(26, 177);
+            this.gbDatosPedido.Location = new System.Drawing.Point(11, 185);
             this.gbDatosPedido.Name = "gbDatosPedido";
             this.gbDatosPedido.Size = new System.Drawing.Size(655, 180);
             this.gbDatosPedido.TabIndex = 20;
             this.gbDatosPedido.TabStop = false;
-            this.gbDatosPedido.Text = "datos del pedido";
+            this.gbDatosPedido.Text = "Datos de Pedido";
+            // 
+            // txtEstadoPedido
+            // 
+            this.txtEstadoPedido.Location = new System.Drawing.Point(407, 139);
+            this.txtEstadoPedido.Name = "txtEstadoPedido";
+            this.txtEstadoPedido.Size = new System.Drawing.Size(30, 20);
+            this.txtEstadoPedido.TabIndex = 28;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(325, 144);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 13);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Estado Pedido";
+            // 
+            // cmbClienteID
+            // 
+            this.cmbClienteID.FormattingEnabled = true;
+            this.cmbClienteID.Location = new System.Drawing.Point(75, 85);
+            this.cmbClienteID.Name = "cmbClienteID";
+            this.cmbClienteID.Size = new System.Drawing.Size(53, 21);
+            this.cmbClienteID.TabIndex = 26;
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(227, 83);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(52, 20);
+            this.txtCantidad.TabIndex = 24;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(172, 88);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 13);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Cantidad";
+            // 
+            // cmbTipoPedido
+            // 
+            this.cmbTipoPedido.FormattingEnabled = true;
+            this.cmbTipoPedido.Location = new System.Drawing.Point(87, 58);
+            this.cmbTipoPedido.Name = "cmbTipoPedido";
+            this.cmbTipoPedido.Size = new System.Drawing.Size(121, 21);
+            this.cmbTipoPedido.TabIndex = 22;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(86, 111);
-            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Location = new System.Drawing.Point(86, 123);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(204, 63);
+            this.txtDescripcion.Size = new System.Drawing.Size(204, 20);
             this.txtDescripcion.TabIndex = 21;
             // 
             // dtPickerRegPedido
@@ -121,13 +172,6 @@ namespace ProyectoMOANSO
             this.dtPickerRegSolicitada.Name = "dtPickerRegSolicitada";
             this.dtPickerRegSolicitada.Size = new System.Drawing.Size(200, 20);
             this.dtPickerRegSolicitada.TabIndex = 17;
-            // 
-            // txtIDCliente
-            // 
-            this.txtIDCliente.Location = new System.Drawing.Point(75, 83);
-            this.txtIDCliente.Name = "txtIDCliente";
-            this.txtIDCliente.Size = new System.Drawing.Size(52, 20);
-            this.txtIDCliente.TabIndex = 15;
             // 
             // txtCodigoPedido
             // 
@@ -180,6 +224,7 @@ namespace ProyectoMOANSO
             this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
             // 
             // btnCancelar
             // 
@@ -189,6 +234,7 @@ namespace ProyectoMOANSO
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // btnModificar
             // 
@@ -198,86 +244,67 @@ namespace ProyectoMOANSO
             this.btnModificar.TabIndex = 6;
             this.btnModificar.Text = "modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(683, 148);
+            this.btnSalir.Location = new System.Drawing.Point(793, 324);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(58, 23);
             this.btnSalir.TabIndex = 19;
-            this.btnSalir.Text = "salir";
+            this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // btnDesabilitar
             // 
-            this.btnDesabilitar.Location = new System.Drawing.Point(683, 102);
+            this.btnDesabilitar.Location = new System.Drawing.Point(776, 247);
             this.btnDesabilitar.Name = "btnDesabilitar";
             this.btnDesabilitar.Size = new System.Drawing.Size(75, 23);
             this.btnDesabilitar.TabIndex = 18;
-            this.btnDesabilitar.Text = "desabilitar";
+            this.btnDesabilitar.Text = "Desabilitar";
             this.btnDesabilitar.UseVisualStyleBackColor = true;
+            this.btnDesabilitar.Click += new System.EventHandler(this.btnDesabilitar_Click_1);
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(683, 60);
+            this.btnEditar.Location = new System.Drawing.Point(776, 187);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.Size = new System.Drawing.Size(75, 46);
             this.btnEditar.TabIndex = 17;
-            this.btnEditar.Text = "editar";
+            this.btnEditar.Text = "Modificar Pedido";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
-            // btnNuevo
+            // btnNuevoPedido
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(683, 21);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 16;
-            this.btnNuevo.Text = "nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevoPedido.Location = new System.Drawing.Point(682, 187);
+            this.btnNuevoPedido.Name = "btnNuevoPedido";
+            this.btnNuevoPedido.Size = new System.Drawing.Size(75, 42);
+            this.btnNuevoPedido.TabIndex = 16;
+            this.btnNuevoPedido.Text = "Nuevo Pedido";
+            this.btnNuevoPedido.UseVisualStyleBackColor = true;
+            this.btnNuevoPedido.Click += new System.EventHandler(this.btnNuevoPedido_Click);
             // 
             // dgvPedido
             // 
             this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPedido.Location = new System.Drawing.Point(26, 21);
+            this.dgvPedido.Location = new System.Drawing.Point(11, 12);
             this.dgvPedido.Name = "dgvPedido";
             this.dgvPedido.ReadOnly = true;
-            this.dgvPedido.Size = new System.Drawing.Size(618, 150);
+            this.dgvPedido.Size = new System.Drawing.Size(840, 150);
             this.dgvPedido.TabIndex = 15;
-            // 
-            // cmbTipoPedido
-            // 
-            this.cmbTipoPedido.FormattingEnabled = true;
-            this.cmbTipoPedido.Location = new System.Drawing.Point(87, 58);
-            this.cmbTipoPedido.Name = "cmbTipoPedido";
-            this.cmbTipoPedido.Size = new System.Drawing.Size(121, 21);
-            this.cmbTipoPedido.TabIndex = 22;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(172, 88);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 13);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Cantidad";
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(227, 83);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(52, 20);
-            this.txtCantidad.TabIndex = 24;
+            this.dgvPedido.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPedido_CellClick);
             // 
             // Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 369);
+            this.ClientSize = new System.Drawing.Size(868, 369);
             this.Controls.Add(this.gbDatosPedido);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnDesabilitar);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnNuevo);
+            this.Controls.Add(this.btnNuevoPedido);
             this.Controls.Add(this.dgvPedido);
             this.Name = "Pedido";
             this.Text = "Pedido";
@@ -292,7 +319,6 @@ namespace ProyectoMOANSO
 
         private System.Windows.Forms.GroupBox gbDatosPedido;
         private System.Windows.Forms.DateTimePicker dtPickerRegSolicitada;
-        private System.Windows.Forms.TextBox txtIDCliente;
         private System.Windows.Forms.TextBox txtCodigoPedido;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
@@ -304,7 +330,7 @@ namespace ProyectoMOANSO
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnDesabilitar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnNuevoPedido;
         private System.Windows.Forms.DataGridView dgvPedido;
         private System.Windows.Forms.DateTimePicker dtPickerRegPedido;
         private System.Windows.Forms.Label label6;
@@ -313,5 +339,8 @@ namespace ProyectoMOANSO
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbTipoPedido;
+        private System.Windows.Forms.ComboBox cmbClienteID;
+        private System.Windows.Forms.TextBox txtEstadoPedido;
+        private System.Windows.Forms.Label label8;
     }
 }

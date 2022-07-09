@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaLogicaNegocio
+namespace CapaEntidad
 {
-    public class Class1
+    public class entArea
     {
+        public string nombre_area { get; set; }
+        public int areaID { get; set; }
     }
 }

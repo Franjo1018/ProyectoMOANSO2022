@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using CapaDatos;
 using CapaEntidad;
 
@@ -31,7 +30,7 @@ namespace CapaLogicaNegocio
         {
             return datPedido.Instancia.ListarPedido();
         }
-        ///inserta
+        
         public void InsertarPedido(entPedido Ped)
         {
             datPedido.Instancia.InsertarPedido(Ped);
@@ -40,9 +39,9 @@ namespace CapaLogicaNegocio
         //edita
         public void EditarPedido(entPedido Ped)
         {
-            datPedido.Instancia.EditarPedido(Ped);
+            datPedido.Instancia.EditaPedido(Ped);
         }
-        //deshabilita
+
         public void DeshabilitarPedido(entPedido Ped)
         {
             datPedido.Instancia.DeshabilitarPedido(Ped);

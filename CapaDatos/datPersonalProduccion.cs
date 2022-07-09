@@ -5,16 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-
 using CapaEntidad;
+
 namespace CapaDatos
 {
     public class datPersonalProduccion
     {
-        //Patron Singleton
-        // Variable estática para la instancia
+
         private static readonly datPersonalProduccion _instancia = new datPersonalProduccion();
-        //privado para evitar la instanciación directa
+        
         public static datPersonalProduccion Instancia
         {
             get
@@ -23,7 +22,7 @@ namespace CapaDatos
             }
         }
 
-        ////////////////////lista personal
+        //////////////////lista personal
         public List<entPersonalProduccion> ListarPersonalProduccion()
         {
             SqlCommand cmd = null;
@@ -38,11 +37,12 @@ namespace CapaDatos
                 while (dr.Read())
                 {
                     entPersonalProduccion Per = new entPersonalProduccion();
-                    Per.codigoPersonal = Convert.ToInt32(dr["codigoPersonal"]);
-                    Per.puesto = dr["puesto"].ToString();
-                    Per.tipoPersonal = dr["tipoPersonal"].ToString();
-                    Per.nombre = dr["nombre"].ToString();
-                    Per.fecRegIngreso = Convert.ToDateTime(dr["fecRegIngreso"]);
+                    Per.apellidos_personal = dr["Apellidos_personal"].ToString();
+                    Per.estado_personal = dr["Estado_personal"].ToString();
+                    Per.nombres_personal = dr["Nombres_personal"].ToString();
+                    Per.personalID = Convert.ToInt32(dr["PersonalproduccionID"]);
+                    Per.areaID = Convert.ToInt32(dr["AreaID"]);
+                    Per.tipoPersonalID = Convert.ToInt32(dr["TipoPersonalID"]);
 
                     lista.Add(Per);
                 }
@@ -67,12 +67,13 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarPersonalProduccion", cn);
+                cmd = new SqlCommand("spInsertaPersonalProduccion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@puesto", Per.puesto);
-                cmd.Parameters.AddWithValue("@tipoPersonal", Per.tipoPersonal);
-                cmd.Parameters.AddWithValue("@nombre", Per.nombre);
-                cmd.Parameters.AddWithValue("@fecRegIngreso", Per.fecRegIngreso);
+                cmd.Parameters.AddWithValue("@Apellidos_personal", Per.apellidos_personal);
+                cmd.Parameters.AddWithValue("@Estado_personal", Per.estado_personal);
+                cmd.Parameters.AddWithValue("@Nombres_personal", Per.nombres_personal);
+                cmd.Parameters.AddWithValue("@AreaID", Per.areaID);
+                cmd.Parameters.AddWithValue("@TipoPersonalID", Per.tipoPersonalID);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -89,7 +90,7 @@ namespace CapaDatos
         }
 
 
-        //edita Personal
+        ////edita Personal
 
         public Boolean EditarPersonalProduccion(entPersonalProduccion Per)
         {
@@ -98,13 +99,14 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarPersonalProduccion", cn);
+                cmd = new SqlCommand("spEditaPersonalProduccion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@codigoPersonal", Per.codigoPersonal);
-                cmd.Parameters.AddWithValue("@puesto", Per.puesto);
-                cmd.Parameters.AddWithValue("@tipoPersonal", Per.tipoPersonal);
-                cmd.Parameters.AddWithValue("@nombre", Per.nombre);
-                cmd.Parameters.AddWithValue("@fecRegIngreso", Per.fecRegIngreso);
+                cmd.Parameters.AddWithValue("@Apellidos_personal", Per.apellidos_personal);
+                cmd.Parameters.AddWithValue("@Estado_personal", Per.estado_personal);
+                cmd.Parameters.AddWithValue("@Nombres_personal", Per.nombres_personal);
+                cmd.Parameters.AddWithValue("@PersonalproduccionID", Per.personalID);
+                cmd.Parameters.AddWithValue("@AreaID", Per.areaID);
+                cmd.Parameters.AddWithValue("@TipoPersonalID", Per.tipoPersonalID);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -129,9 +131,9 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitarPersonalProduccion", cn);
+                cmd = new SqlCommand("spDeshabilitaPersonalProduccion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@codigoPersonal", Per.codigoPersonal);
+                cmd.Parameters.AddWithValue("@PersonalproduccionID", Per.personalID);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

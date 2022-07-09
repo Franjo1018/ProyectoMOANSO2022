@@ -25,7 +25,7 @@ namespace ProyectoMOANSO
 
         public void listarMuebleTerminado()
         {
-            dgvMueble.DataSource = logMuebleTerminado.Instancia.ListarMuebleTerminado();
+            //dgvMueble.DataSource = logMuebleTerminado.Instancia.ListarMuebleTerminado();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -39,19 +39,19 @@ namespace ProyectoMOANSO
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             //insertar
-            try
-            {
-                entMuebleTerminado c = new entMuebleTerminado();
+            //try
+            //{
+            //    entMuebleTerminado c = new entMuebleTerminado();
                 
-                logMuebleTerminado.Instancia.InsertarMuebleTerminado(c);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error.." + ex);
-            }
-            LimpiarVariables();
-            groupBoxDatos.Enabled = false;
-            listarMuebleTerminado();
+            //   logMuebleTerminado.Instancia.InsertarMuebleTerminado(c);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error.." + ex);
+            //}
+            //LimpiarVariables();
+            //groupBoxDatos.Enabled = false;
+            //listarMuebleTerminado();
         }
 
         private void LimpiarVariables()
@@ -79,20 +79,20 @@ namespace ProyectoMOANSO
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                entMuebleTerminado c = new entMuebleTerminado();
-                c.codigoMueble = int.Parse(txtCodigoMueble.Text.Trim());
+            //try
+            //{
+            //    entMuebleTerminado c = new entMuebleTerminado();
+            //    c.codigoMueble = int.Parse(txtCodigoMueble.Text.Trim());
                 
-                logMuebleTerminado.Instancia.InsertarMuebleTerminado(c);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error.." + ex);
-            }
-            LimpiarVariables();
-            groupBoxDatos.Enabled = false;
-            listarMuebleTerminado();
+            //    logMuebleTerminado.Instancia.InsertarMuebleTerminado(c);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error.." + ex);
+            //}
+            //LimpiarVariables();
+            //groupBoxDatos.Enabled = false;
+            //listarMuebleTerminado();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -102,21 +102,21 @@ namespace ProyectoMOANSO
 
         private void btnDesabilitar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                entMuebleTerminado c = new entMuebleTerminado();
+            //try
+            //{
+            //    entMuebleTerminado c = new entMuebleTerminado();
 
-                c.codigoMueble = int.Parse(txtCodigoMueble.Text.Trim());
+            //    c.codigoMueble = int.Parse(txtCodigoMueble.Text.Trim());
                 
-                logMuebleTerminado.Instancia.DeshabilitarMuebleTerminado(c);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error.." + ex);
-            }
-            LimpiarVariables();
-            groupBoxDatos.Enabled = false;
-            listarMuebleTerminado();
+            //    logMuebleTerminado.Instancia.DeshabilitarMuebleTerminado(c);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error.." + ex);
+            //}
+            //LimpiarVariables();
+            //groupBoxDatos.Enabled = false;
+            //listarMuebleTerminado();
         }
     }
 }

@@ -25,7 +25,7 @@ namespace ProyectoMOANSO
 
         public void listarProcesoMantenimiento()
         {
-            dgvProceso.DataSource = logProcesoMantenimiento.Instancia.ListarProcesoMantenimiento();
+            //dgvProceso.DataSource = logProcesoMantenimiento.Instancia.ListarProcesoMantenimiento();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -39,23 +39,23 @@ namespace ProyectoMOANSO
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             //insertar
-            try
-            {
-                entProcesoMantenimiento c = new entProcesoMantenimiento();
-                c.procedimiento = txtProcedimiento.Text.Trim();
-                c.duracion = txtDuracion.Text.Trim();
-                c.tipoProceso = txtTipoProceso.Text.Trim();
-                c.descripcion = txtDescripcion.Text.Trim();
-                c.fecRegProceso = dtPickerRegProceso.Value;
-                logProcesoMantenimiento.Instancia.InsertarProcesoMantenimiento(c);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error.." + ex);
-            }
-            LimpiarVariables();
-            groupBoxDatos.Enabled = false;
-            listarProcesoMantenimiento();
+            //try
+            //{
+            //    entProcesoMantenimiento c = new entProcesoMantenimiento();
+            //    c.procedimiento = txtProcedimiento.Text.Trim();
+            //    c.duracion = txtDuracion.Text.Trim();
+            //    c.tipoProceso = txtTipoProceso.Text.Trim();
+            //    c.descripcion = txtDescripcion.Text.Trim();
+            //    c.fecRegProceso = dtPickerRegProceso.Value;
+            //    logProcesoMantenimiento.Instancia.InsertarProcesoMantenimiento(c);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error.." + ex);
+            //}
+            //LimpiarVariables();
+            //groupBoxDatos.Enabled = false;
+            //listarProcesoMantenimiento();
         }
 
         private void LimpiarVariables()
@@ -91,24 +91,24 @@ namespace ProyectoMOANSO
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                entProcesoMantenimiento c = new entProcesoMantenimiento();
-                c.codigoProceso = int.Parse(txtCodigoProceso.Text.Trim());
-                c.procedimiento = txtProcedimiento.Text.Trim();
-                c.duracion = txtDuracion.Text.Trim();
-                c.tipoProceso = txtTipoProceso.Text.Trim();
-                c.descripcion = txtDescripcion.Text.Trim();
-                c.fecRegProceso = dtPickerRegProceso.Value;
-                logProcesoMantenimiento.Instancia.InsertarProcesoMantenimiento(c);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error.." + ex);
-            }
-            LimpiarVariables();
-            groupBoxDatos.Enabled = false;
-            listarProcesoMantenimiento();
+            //try
+            //{
+            //    entProcesoMantenimiento c = new entProcesoMantenimiento();
+            //    c.codigoProceso = int.Parse(txtCodigoProceso.Text.Trim());
+            //    c.procedimiento = txtProcedimiento.Text.Trim();
+            //    c.duracion = txtDuracion.Text.Trim();
+            //    c.tipoProceso = txtTipoProceso.Text.Trim();
+            //    c.descripcion = txtDescripcion.Text.Trim();
+            //    c.fecRegProceso = dtPickerRegProceso.Value;
+            //    logProcesoMantenimiento.Instancia.InsertarProcesoMantenimiento(c);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error.." + ex);
+            //}
+            //LimpiarVariables();
+            //groupBoxDatos.Enabled = false;
+            //listarProcesoMantenimiento();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -118,20 +118,20 @@ namespace ProyectoMOANSO
 
         private void btnDesabilitar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                entProcesoMantenimiento c = new entProcesoMantenimiento();
+            //try
+            //{
+            //    entProcesoMantenimiento c = new entProcesoMantenimiento();
 
-                c.codigoProceso = int.Parse(txtCodigoProceso.Text.Trim());
-                logProcesoMantenimiento.Instancia.DeshabilitarProcesoMantenimiento(c);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error.." + ex);
-            }
-            LimpiarVariables();
-            groupBoxDatos.Enabled = false;
-            listarProcesoMantenimiento();
+            //    c.codigoProceso = int.Parse(txtCodigoProceso.Text.Trim());
+            //    logProcesoMantenimiento.Instancia.DeshabilitarProcesoMantenimiento(c);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error.." + ex);
+            //}
+            //LimpiarVariables();
+            //groupBoxDatos.Enabled = false;
+            //listarProcesoMantenimiento();
         }
     }
 }

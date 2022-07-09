@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class Class1
+    public class entTipopedido
     {
+        public string nombre_tipo_pedido { get; set; }
+        public int tipopedidoID { get; set; }
     }
 }

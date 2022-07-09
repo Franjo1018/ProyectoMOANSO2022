@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using CapaLogicaNegocio;
 using CapaEntidad;
 
@@ -18,6 +17,17 @@ namespace ProyectoMOANSO
         public PersonalProduccion()
         {
             InitializeComponent();
+            listarPersonalProduccion();
+            llenarDatosCBArea();
+            llenarDatosCBTipoPersonal();
+            txtPersonalID.Enabled = false;
+            gbPersonalProduccion.Enabled = false;
+            btnAgregar.Visible = false;
+            btnAgregar.Enabled = false;           
+            btnModificar.Visible = false;
+            btnModificar.Enabled = false;
+            btnCancelar.Visible = false;
+            btnCancelar.Enabled = false;
         }
 
         public void listarPersonalProduccion()
@@ -25,95 +35,132 @@ namespace ProyectoMOANSO
             dgvPersonal.DataSource = logPersonalProduccion.Instancia.ListarPersonalProduccion();
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            groupBoxDatos.Enabled = true;
-            btnAgregar.Visible = true;
-            LimpiarVariables();
-            btnModificar.Visible = false;
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            //insertar
-            try
-            {
-                entPersonalProduccion c = new entPersonalProduccion();
-                
-                logPersonalProduccion.Instancia.InsertarPersonalProduccion(c);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error.." + ex);
-            }
-            LimpiarVariables();
-            groupBoxDatos.Enabled = false;
-            listarPersonalProduccion();
-        }
-
         private void LimpiarVariables()
         {
-            
-            txtNombre.Text = " ";
+            txtNombres.Text = " ";
+            txtApellidos.Text = " ";
+            txtEstadoPersonal.Text = " ";
+            txtPersonalID.Text = " ";
         }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void llenarDatosCBArea()
         {
-            LimpiarVariables();
+            cmbArea.DataSource = logArea.Instancia.ListarArea();
+            cmbArea.DisplayMember = "Nombre_area";
+            cmbArea.ValueMember = "AreaID";
         }
 
-        private void dgvMueble_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void llenarDatosCBTipoPersonal()
         {
-            DataGridViewRow filaActual = dgvPersonal.Rows[e.RowIndex]; //
-            txtCodigoPersonal.Text = filaActual.Cells[0].Value.ToString();
-           
+            cmbTipoPersonal.DataSource = logTipopersonal.Instancia.ListarTipoPersonal();
+            cmbTipoPersonal.DisplayMember = "Nombre_tipo_personal";
+            cmbTipoPersonal.ValueMember = "TipoPersonalID";
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        
+
+        private void btnNuevo_Click_1(object sender, EventArgs e)
         {
-            groupBoxDatos.Enabled = true;
-            btnModificar.Visible = true;
-            btnAgregar.Visible = false;
+            gbPersonalProduccion.Enabled = true;
+            btnAgregar.Visible = true;
+            btnAgregar.Enabled = true;
+            btnCancelar.Visible = true;
+            btnCancelar.Enabled = true;
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void btnAgregar_Click_1(object sender, EventArgs e)
         {
             try
             {
-                entPersonalProduccion c = new entPersonalProduccion();
-                c.codigoPersonal = int.Parse(txtCodigoPersonal.Text.Trim());
-                
-                logPersonalProduccion.Instancia.InsertarPersonalProduccion(c);
+                entPersonalProduccion Per = new entPersonalProduccion();
+                Per.apellidos_personal = txtApellidos.Text.Trim();
+                Per.estado_personal = txtEstadoPersonal.Text.Trim();
+                Per.nombres_personal = txtNombres.Text.Trim();
+                Per.areaID = Convert.ToInt32(cmbArea.SelectedValue);
+                Per.tipoPersonalID = Convert.ToInt32(cmbTipoPersonal.SelectedValue);
+                logPersonalProduccion.Instancia.InsertarPersonalProduccion(Per);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error.." + ex);
             }
             LimpiarVariables();
-            groupBoxDatos.Enabled = false;
+            gbPersonalProduccion.Enabled = false;
             listarPersonalProduccion();
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                entPersonalProduccion Per = new entPersonalProduccion();
+                Per.apellidos_personal = txtApellidos.Text.Trim();
+                Per.estado_personal = txtEstadoPersonal.Text.Trim();
+                Per.nombres_personal = txtNombres.Text.Trim();
+                Per.personalID = Convert.ToInt32(txtPersonalID.Text.Trim());
+                Per.areaID = Convert.ToInt32(cmbArea.SelectedValue);
+                Per.tipoPersonalID = Convert.ToInt32(cmbTipoPersonal.SelectedValue);
+                logPersonalProduccion.Instancia.EditarPersonalProduccion(Per);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            gbPersonalProduccion.Enabled = false;
+            listarPersonalProduccion();
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnDesabilitar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            gbPersonalProduccion.Enabled = false;
+            btnAgregar.Visible = false;
+            btnAgregar.Enabled = false;
+            btnModificar.Visible = false;
+            btnModificar.Enabled = false;
+            btnCancelar.Visible = false;
+            btnCancelar.Enabled = false;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            gbPersonalProduccion.Enabled = true;
+            btnModificar.Visible = true;
+            btnModificar.Enabled = true;
+            btnCancelar.Visible = true;
+            btnCancelar.Enabled = true;
+        }
+
+        private void dgvPersonal_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow filaActual = dgvPersonal.Rows[e.RowIndex]; //
+            txtApellidos.Text = filaActual.Cells[0].Value.ToString();
+            txtEstadoPersonal.Text = filaActual.Cells[1].Value.ToString();
+            txtNombres.Text = filaActual.Cells[2].Value.ToString();
+            txtPersonalID.Text = filaActual.Cells[3].Value.ToString();
+            cmbArea.Text = filaActual.Cells[4].Value.ToString();
+            cmbTipoPersonal.Text = filaActual.Cells[5].Value.ToString();
+        }
+
+        private void btnDesabilitar_Click_1(object sender, EventArgs e)
         {
             try
             {
-                entPersonalProduccion c = new entPersonalProduccion();
+                entPersonalProduccion Per = new entPersonalProduccion();
 
-                c.codigoPersonal = int.Parse(txtCodigoPersonal.Text.Trim());
-                logPersonalProduccion.Instancia.DeshabilitarPersonalProduccion(c);
+                Per.personalID = int.Parse(txtPersonalID.Text.Trim());
+                logPersonalProduccion.Instancia.DeshabilitarPersonalProduccion(Per);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error.." + ex);
             }
             LimpiarVariables();
-            groupBoxDatos.Enabled = false;
+            gbPersonalProduccion.Enabled = false;
             listarPersonalProduccion();
         }
     }

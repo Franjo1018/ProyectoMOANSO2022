@@ -8,10 +8,12 @@ namespace CapaEntidad
 {
     public class entPersonalProduccion
     {
-        public int codigoPersonal { get; set; }
-        public string puesto { get; set; }
-        public string tipoPersonal { get; set; }
-        public string nombre { get; set; }
-        public DateTime fecRegIngreso { get; set; }
+        public string apellidos_personal { get; set; }
+        public string estado_personal { get; set; }
+        public string nombres_personal { get; set; }
+        public int personalID { get; set; }
+        public int areaID { get; set; }
+        public int tipoPersonalID { get; set; }
+        
     }
 }

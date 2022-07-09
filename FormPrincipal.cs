@@ -25,7 +25,7 @@ namespace ProyectoMOANSO
 
         private void button3_Click(object sender, EventArgs e)
         {
-            OrdenMantenimiento f = new OrdenMantenimiento();
+            ProcesoProduccion f = new ProcesoProduccion();
             f.Show();
         }
 
