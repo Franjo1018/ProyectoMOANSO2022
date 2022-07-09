@@ -8,10 +8,11 @@ namespace CapaEntidad
 {
     public class entMuebleTerminado
     {
-        public int codigoMueble { get; set; }
-        public string tipoMueble { get; set; }
-        public string planoMueble { get; set; }
-        public DateTime fecRegMueble { get; set; }
-        public Boolean estadoMueble { get; set; }
+        public int MuebleID { get; set; }
+        public string Color_tinte { get; set; }
+        public string Descripcion { get; set; }
+        public int OrdendeproduccionID { get; set; }
+        public int PlanodemuebleID { get; set; }
+        public int TipotinteID { get; set; }
     }
 }

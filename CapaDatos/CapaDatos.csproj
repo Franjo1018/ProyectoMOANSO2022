@@ -48,6 +48,7 @@
     <Compile Include="datPedido.cs" />
     <Compile Include="datPersonalProduccion.cs" />
     <Compile Include="datProcesoProduccion.cs" />
+    <Compile Include="datTipomueble.cs" />
     <Compile Include="datTipopedido.cs" />
     <Compile Include="datTipopersonal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

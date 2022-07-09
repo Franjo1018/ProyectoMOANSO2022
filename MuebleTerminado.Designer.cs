@@ -30,6 +30,8 @@ namespace ProyectoMOANSO
         private void InitializeComponent()
         {
             this.groupBoxDatos = new System.Windows.Forms.GroupBox();
+            this.txtOrden = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtColor = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -47,15 +49,13 @@ namespace ProyectoMOANSO
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvMueble = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBoxDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMueble)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxDatos
             // 
-            this.groupBoxDatos.Controls.Add(this.textBox1);
+            this.groupBoxDatos.Controls.Add(this.txtOrden);
             this.groupBoxDatos.Controls.Add(this.label6);
             this.groupBoxDatos.Controls.Add(this.txtColor);
             this.groupBoxDatos.Controls.Add(this.label5);
@@ -76,6 +76,22 @@ namespace ProyectoMOANSO
             this.groupBoxDatos.TabIndex = 14;
             this.groupBoxDatos.TabStop = false;
             this.groupBoxDatos.Text = "datos del mueble";
+            // 
+            // txtOrden
+            // 
+            this.txtOrden.Location = new System.Drawing.Point(269, 29);
+            this.txtOrden.Name = "txtOrden";
+            this.txtOrden.Size = new System.Drawing.Size(63, 20);
+            this.txtOrden.TabIndex = 24;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(155, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 13);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Orden de Produccion:";
             // 
             // txtColor
             // 
@@ -229,22 +245,6 @@ namespace ProyectoMOANSO
             this.dgvMueble.TabIndex = 9;
             this.dgvMueble.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMueble_CellClick);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(155, 32);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 13);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Orden de Produccion:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(269, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(63, 20);
-            this.textBox1.TabIndex = 24;
-            // 
             // MuebleTerminado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,7 +284,7 @@ namespace ProyectoMOANSO
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbTipoTinte;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtOrden;
         private System.Windows.Forms.Label label6;
     }
 }

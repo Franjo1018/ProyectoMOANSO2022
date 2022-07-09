@@ -27,25 +27,25 @@ namespace CapaLogicaNegocio
 
         ///listado
 
-        //public List<entMuebleTerminado> ListarMuebleTerminado()
-        //{
-        //    return datMuebleTerminado.Instancia.ListarMuebleTerminado();
-        //}
+        public List<entMuebleTerminado> ListarMuebleTerminado()
+        {
+            return datMuebleTerminado.Instancia.ListarMuebleTerminado();
+        }
         /////inserta
-        //public void InsertarMuebleTerminado(entMuebleTerminado Mue)
-        //{
-        //    datMuebleTerminado.Instancia.InsertarMuebleTerminado(Mue);
-        //}
+        public void InsertarMuebleTerminado(entMuebleTerminado Mue)
+        {
+            datMuebleTerminado.Instancia.InsertarMuebleTerminado(Mue);
+        }
 
         ////edita
-        //public void EditarMuebleTerminado(entMuebleTerminado Mue)
-        //{
-        //    datMuebleTerminado.Instancia.EditarMuebleTerminado(Mue);
-        //}
+        public void EditarMuebleTerminado(entMuebleTerminado Mue)
+        {
+            datMuebleTerminado.Instancia.EditarMuebleTerminado(Mue);
+        }
         ////deshabilita
-        //public void DeshabilitarMuebleTerminado(entMuebleTerminado Mue)
-        //{
-        //    datMuebleTerminado.Instancia.DeshabilitarMuebleTerminado(Mue);
-        //}
+        public void DeshabilitarMuebleTerminado(entMuebleTerminado Mue)
+        {
+            datMuebleTerminado.Instancia.DeshabilitarMuebleTerminado(Mue);
+        }
     }
 }

@@ -26,8 +26,8 @@ namespace CapaDatos
         public SqlConnection Conectar()
         {
             SqlConnection cn = new SqlConnection();
-            cn.ConnectionString = "Data Source=DESKTOP-CVMHKR2; Initial Catalog = MOANSO-2022; Integrated Security = True";
-
+            //cn.ConnectionString = "Data Source=DESKTOP-CVMHKR2; Initial Catalog = MOANSO-2022; Integrated Security = True";
+            cn.ConnectionString = "Data Source=DESKTOP-RC7PIKP; Initial Catalog = MOANSO-2022; Integrated Security = True";
             return cn;
         }
     }

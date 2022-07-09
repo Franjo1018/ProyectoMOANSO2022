@@ -47,6 +47,7 @@
     <Compile Include="entPedido.cs" />
     <Compile Include="entPersonalProduccion.cs" />
     <Compile Include="entProcesoProduccion.cs" />
+    <Compile Include="entTipomueble.cs" />
     <Compile Include="entTipopedido.cs" />
     <Compile Include="entTipopersonal.cs" />
     <Compile Include="entTipoproceso.cs" />
