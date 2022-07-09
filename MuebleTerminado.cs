@@ -26,14 +26,14 @@ namespace ProyectoMOANSO
 
         public void listarMuebleTerminado()
         {
-            dgvMueble.DataSource = logMuebleTerminado.Instancia.ListarMuebleTerminado();
+            //dgvMueble.DataSource = logMuebleTerminado.Instancia.ListarMuebleTerminado();
         }
 
         private void llenarDatosCBTipoTinte()
         {
-            cmbTipoTinte.DataSource = logTipoMueble.Instancia.ListarTipoMueble();
-            cmbTipoTinte.DisplayMember = "Nombre_tipo_mueble";
-            cmbTipoTinte.ValueMember = "TipotinteID";
+            //cmbTipoTinte.DataSource = logTipoMueble.Instancia.ListarTipoMueble();
+            //cmbTipoTinte.DisplayMember = "Nombre_tipo_mueble";
+            //cmbTipoTinte.ValueMember = "TipotinteID";
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -49,23 +49,23 @@ namespace ProyectoMOANSO
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                entMuebleTerminado Mue = new entMuebleTerminado();
-                Mue.PlanodemuebleID = int.Parse(txtPlanoMueble.Text.Trim());
-                Mue.Descripcion = txtDescripcion.Text.Trim();
-                Mue.OrdendeproduccionID = int.Parse(txtOrden.Text.Trim());
-                Mue.Color_tinte = txtColor.Text.Trim();
-                Mue.TipotinteID = Convert.ToInt32(cmbTipoTinte.SelectedValue);
-                logMuebleTerminado.Instancia.InsertarMuebleTerminado(Mue);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error.." + ex);
-            }
-            LimpiarVariables();
-            groupBoxDatos.Enabled = false;
-            listarMuebleTerminado();
+            //try
+            //{
+            //    entMuebleTerminado Mue = new entMuebleTerminado();
+            //    Mue.PlanodemuebleID = int.Parse(txtPlanoMueble.Text.Trim());
+            //    Mue.Descripcion = txtDescripcion.Text.Trim();
+            //    Mue.OrdendeproduccionID = int.Parse(txtOrden.Text.Trim());
+            //    Mue.Color_tinte = txtColor.Text.Trim();
+            //    Mue.TipotinteID = Convert.ToInt32(cmbTipoTinte.SelectedValue);
+            //    logMuebleTerminado.Instancia.InsertarMuebleTerminado(Mue);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error.." + ex);
+            //}
+            //LimpiarVariables();
+            //groupBoxDatos.Enabled = false;
+            //listarMuebleTerminado();
         }
 
         private void LimpiarVariables()
@@ -102,24 +102,24 @@ namespace ProyectoMOANSO
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                entMuebleTerminado Mue = new entMuebleTerminado();
-                Mue.MuebleID = int.Parse(txtCodigoMueble.Text.Trim());
-                Mue.PlanodemuebleID = int.Parse(txtPlanoMueble.Text.Trim());
-                Mue.Descripcion = txtDescripcion.Text.Trim();
-                Mue.OrdendeproduccionID = int.Parse(txtOrden.Text.Trim());
-                Mue.Color_tinte = txtColor.Text.Trim();
-                Mue.TipotinteID = Convert.ToInt32(cmbTipoTinte.SelectedValue);
-                logMuebleTerminado.Instancia.InsertarMuebleTerminado(Mue);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error.." + ex);
-            }
-            LimpiarVariables();
-            groupBoxDatos.Enabled = false;
-            listarMuebleTerminado();
+            //try
+            //{
+            //    entMuebleTerminado Mue = new entMuebleTerminado();
+            //    Mue.MuebleID = int.Parse(txtCodigoMueble.Text.Trim());
+            //    Mue.PlanodemuebleID = int.Parse(txtPlanoMueble.Text.Trim());
+            //    Mue.Descripcion = txtDescripcion.Text.Trim();
+            //    Mue.OrdendeproduccionID = int.Parse(txtOrden.Text.Trim());
+            //    Mue.Color_tinte = txtColor.Text.Trim();
+            //    Mue.TipotinteID = Convert.ToInt32(cmbTipoTinte.SelectedValue);
+            //    logMuebleTerminado.Instancia.InsertarMuebleTerminado(Mue);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error.." + ex);
+            //}
+            //LimpiarVariables();
+            //groupBoxDatos.Enabled = false;
+            //listarMuebleTerminado();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -129,19 +129,19 @@ namespace ProyectoMOANSO
 
         private void btnDesabilitar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                entMuebleTerminado Mue = new entMuebleTerminado();
-                Mue.MuebleID = int.Parse(txtCodigoMueble.Text.Trim());
-                logMuebleTerminado.Instancia.DeshabilitarMuebleTerminado(Mue);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error.." + ex);
-            }
-            LimpiarVariables();
-            groupBoxDatos.Enabled = false;
-            listarMuebleTerminado();
+            //try
+            //{
+            //    entMuebleTerminado Mue = new entMuebleTerminado();
+            //    Mue.MuebleID = int.Parse(txtCodigoMueble.Text.Trim());
+            //    logMuebleTerminado.Instancia.DeshabilitarMuebleTerminado(Mue);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error.." + ex);
+            //}
+            //LimpiarVariables();
+            //groupBoxDatos.Enabled = false;
+            //listarMuebleTerminado();
         }
     }
 }

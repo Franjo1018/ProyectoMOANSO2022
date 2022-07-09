@@ -43,14 +43,17 @@
   <ItemGroup>
     <Compile Include="entArea.cs" />
     <Compile Include="entCliente.cs" />
+    <Compile Include="entDetallemueble.cs" />
+    <Compile Include="entMaterial.cs" />
     <Compile Include="entMuebleTerminado.cs" />
     <Compile Include="entPedido.cs" />
     <Compile Include="entPersonalProduccion.cs" />
+    <Compile Include="entPlanodeMueble.cs" />
     <Compile Include="entProcesoProduccion.cs" />
-    <Compile Include="entTipomueble.cs" />
     <Compile Include="entTipopedido.cs" />
     <Compile Include="entTipopersonal.cs" />
     <Compile Include="entTipoproceso.cs" />
+    <Compile Include="entTipotinte.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="logArea.cs" />
-    <Compile Include="logTipoMueble.cs" />
+    <Compile Include="logDetallemueble.cs" />
+    <Compile Include="logMaterial.cs" />
+    <Compile Include="logPlanodeMueble.cs" />
     <Compile Include="logTipopersonal.cs" />
     <Compile Include="logCliente.cs" />
     <Compile Include="logMuebleTerminado.cs" />
@@ -51,6 +53,7 @@
     <Compile Include="logProcesoProduccion.cs" />
     <Compile Include="logTipopedido.cs" />
     <Compile Include="logTipoproceso.cs" />
+    <Compile Include="logTipotinte.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

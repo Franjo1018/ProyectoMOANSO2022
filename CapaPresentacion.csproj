@@ -117,6 +117,9 @@
     <EmbeddedResource Include="OrdenMantenimiento.resx">
       <DependentUpon>OrdenMantenimiento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PlanodeMueble.resx">
+      <DependentUpon>PlanodeMueble.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProcesoProduccion.resx">
       <DependentUpon>ProcesoProduccion.cs</DependentUpon>
     </EmbeddedResource>

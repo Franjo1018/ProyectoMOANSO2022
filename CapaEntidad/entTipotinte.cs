@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class entTipomueble
+    public class entTipotinte
     {
-        public string nombre_tipo_mueble { get; set; }
-        public int TipotinteID { get; set; }
+        public string nombre_tinte { get; set; }
+        public int tipotinteID { get; set; }
     }
 }

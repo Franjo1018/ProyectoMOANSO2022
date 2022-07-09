@@ -34,6 +34,7 @@ namespace ProyectoMOANSO
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.btnPlanoMueble = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -44,6 +45,7 @@ namespace ProyectoMOANSO
             this.button1.TabIndex = 0;
             this.button1.Text = "Ingresar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -85,11 +87,22 @@ namespace ProyectoMOANSO
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // btnPlanoMueble
+            // 
+            this.btnPlanoMueble.Location = new System.Drawing.Point(66, 286);
+            this.btnPlanoMueble.Name = "btnPlanoMueble";
+            this.btnPlanoMueble.Size = new System.Drawing.Size(155, 23);
+            this.btnPlanoMueble.TabIndex = 5;
+            this.btnPlanoMueble.Text = "Plano de Mueble";
+            this.btnPlanoMueble.UseVisualStyleBackColor = true;
+            this.btnPlanoMueble.Click += new System.EventHandler(this.btnPlanoMueble_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPlanoMueble);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -108,6 +121,7 @@ namespace ProyectoMOANSO
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnPlanoMueble;
     }
 }
 

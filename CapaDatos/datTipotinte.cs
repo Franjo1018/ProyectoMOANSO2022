@@ -9,35 +9,35 @@ using CapaEntidad;
 
 namespace CapaDatos
 {
-    public class datTipomueble
+    public class datTipotinte
     {
-        private static readonly datTipomueble _instancia = new datTipomueble();
+        private static readonly datTipotinte _instancia = new datTipotinte();
 
-        public static datTipomueble Instancia
+        public static datTipotinte Instancia
         {
             get
             {
-                return datTipomueble._instancia;
+                return datTipotinte._instancia;
             }
         }
 
-        public List<entTipomueble> ListarTipomueble()
+        public List<entTipotinte> ListarTipoTinte()
         {
             SqlCommand cmd = null;
-            List<entTipomueble> lista = new List<entTipomueble>();
+            List<entTipotinte> lista = new List<entTipotinte>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListaTipoMueble", cn);
+                cmd = new SqlCommand("spListaTipoTinte", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entTipomueble TiM = new entTipomueble();
-                    TiM.nombre_tipo_mueble = dr["Nombre_tipo_pedido"].ToString();
-                    TiM.TipotinteID = Convert.ToInt32(dr["TipotinteID"]);
-                    lista.Add(TiM);
+                    entTipotinte TiTi = new entTipotinte();
+                    TiTi.nombre_tinte = dr["Nombre_tinte"].ToString();
+                    TiTi.tipotinteID = Convert.ToInt32(dr["TipotinteID"]);
+                    lista.Add(TiTi);
                 }
             }
             catch (Exception e)

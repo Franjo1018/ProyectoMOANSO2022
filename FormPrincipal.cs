@@ -40,5 +40,16 @@ namespace ProyectoMOANSO
             PersonalProduccion f = new PersonalProduccion();
             f.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnPlanoMueble_Click(object sender, EventArgs e)
+        {
+            PlanodeMueble f = new PlanodeMueble();
+            f.Show();
+        }
     }
 }
