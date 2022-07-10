@@ -198,7 +198,7 @@ namespace ProyectoMOANSO
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(512, 122);
+            this.btnSalir.Location = new System.Drawing.Point(512, 324);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 13;
@@ -208,7 +208,7 @@ namespace ProyectoMOANSO
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(512, 35);
+            this.btnNuevo.Location = new System.Drawing.Point(512, 202);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
             this.btnNuevo.TabIndex = 10;
@@ -222,7 +222,7 @@ namespace ProyectoMOANSO
             this.dgvMueble.Location = new System.Drawing.Point(12, 12);
             this.dgvMueble.Name = "dgvMueble";
             this.dgvMueble.ReadOnly = true;
-            this.dgvMueble.Size = new System.Drawing.Size(461, 150);
+            this.dgvMueble.Size = new System.Drawing.Size(589, 150);
             this.dgvMueble.TabIndex = 9;
             this.dgvMueble.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMueble_CellClick);
             // 
