@@ -18,23 +18,10 @@ namespace ProyectoMOANSO
         {
             InitializeComponent();
             llenarDatosCBMaterial();
-            //PlanoID();
             gbPlanoMueble.Enabled = false;
             gbMateriales.Enabled = false;
         }
 
-        public void PlanoID()
-        {
-            int id = logPlanodeMueble.Instancia.PlanoID();
-            txtPlanoiID.Text = Convert.ToString(id);
-        }
-
-        public void listarMateriales()
-        {
-            int id;
-            id = int.Parse(txtPlanoiID.Text.Trim());
-            dgvMaterialesPlano.DataSource = logDetallemueble.Instancia.ListarDetalleMueble(id);
-        }
         private void llenarDatosCBMaterial()
         {
             cmbMaterial.DataSource = logMaterial.Instancia.ListarMaterial();
@@ -88,6 +75,12 @@ namespace ProyectoMOANSO
             txtPlanoiID.Text = " ";
 
         }
+        public void LimpiarVariablesMaterial()
+        {
+            txtCantidad.Text = " ";
+
+            txtMedidas.Text = " ";
+        }
 
         private void btnAnadir_Click(object sender, EventArgs e)
         {
@@ -105,7 +98,13 @@ namespace ProyectoMOANSO
                 MessageBox.Show("Error.." + ex);
             }
             LimpiarVariables();
-            listarMateriales();
+        }
+
+        private void btnGrabarMateriales_Click(object sender, EventArgs e)
+        {
+            gbPlanoMueble.Enabled = true;
+            gbMateriales.Enabled = true;
+            LimpiarVariables();
         }
     }
 }

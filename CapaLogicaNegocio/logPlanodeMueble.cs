@@ -23,10 +23,9 @@ namespace CapaLogicaNegocio
 
 
         ///listado
-
-        public int PlanoID()
+        public List<entPlanodeMueble> ListarPlanodeMueble()
         {
-            return datPlanodeMueble.Instancia.PlanoID();
+            return datPlanodeMueble.Instancia.ListarPlanodeMueble();
         }
 
         public void InsertarPlanodeMueble(entPlanodeMueble PlMu)

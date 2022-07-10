@@ -22,20 +22,29 @@ namespace CapaDatos
             }
         }
 
-        ////////////////////lista pedido
-        public int PlanoID()
+        ////////////////////lista 
+
+        public List<entPlanodeMueble> ListarPlanodeMueble()
         {
             SqlCommand cmd = null;
-            int id;
+            List<entPlanodeMueble> lista = new List<entPlanodeMueble>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("spPlanoID", cn);//                                                      
+                cmd = new SqlCommand("spListaPlanodeMueble", cn);//                                                      
                 cmd.CommandType = CommandType.StoredProcedure;//
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
-                id = Convert.ToInt32(dr["PlanodemuebleID"]);
-                id++;
+                while (dr.Read())
+                {
+                    entPlanodeMueble PlMu = new entPlanodeMueble();
+                    PlMu.estado_plano = dr["Estado_plano"].ToString();
+                    PlMu.fecha_plano = Convert.ToDateTime(dr["Fecha_plano"]);
+                    PlMu.planodemuebleID = Convert.ToInt32(dr["PlanodemuebleID"]);
+
+                    lista.Add(PlMu);
+                }
+
             }
             catch (Exception e)
             {
@@ -45,7 +54,7 @@ namespace CapaDatos
             {
                 cmd.Connection.Close();
             }
-            return id;
+            return lista;
         }
 
         //inserta pedido/

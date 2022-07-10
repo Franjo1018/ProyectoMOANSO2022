@@ -30,98 +30,143 @@ namespace ProyectoMOANSO
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnPlanoMueble = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ordenDeProduccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.planoDeMuebleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.personalDeProduccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.procesoDeProduccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.muebleTerminadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(637, 352);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(609, 265);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 34);
+            this.button1.Size = new System.Drawing.Size(76, 30);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Ingresar";
+            this.button1.Text = "Salir";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // menuStrip1
             // 
-            this.button2.Location = new System.Drawing.Point(66, 60);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(196, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "mantenedor mueble terminado";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.transaccionesToolStripMenuItem,
+            this.mantenedoresToolStripMenuItem,
+            this.consultasToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(698, 25);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // button3
+            // transaccionesToolStripMenuItem
             // 
-            this.button3.Location = new System.Drawing.Point(66, 104);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(223, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "mantenedor proceso de Produccion";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.transaccionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ordenDeProduccionToolStripMenuItem,
+            this.planoDeMuebleToolStripMenuItem});
+            this.transaccionesToolStripMenuItem.Name = "transaccionesToolStripMenuItem";
+            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(93, 19);
+            this.transaccionesToolStripMenuItem.Text = "Transacciones";
             // 
-            // button4
+            // ordenDeProduccionToolStripMenuItem
             // 
-            this.button4.Location = new System.Drawing.Point(66, 148);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(149, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "mantenedor pedido";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.ordenDeProduccionToolStripMenuItem.Name = "ordenDeProduccionToolStripMenuItem";
+            this.ordenDeProduccionToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.ordenDeProduccionToolStripMenuItem.Text = "Orden de Produccion";
             // 
-            // button5
+            // planoDeMuebleToolStripMenuItem
             // 
-            this.button5.Location = new System.Drawing.Point(66, 196);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(212, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "mantenedor personal de produccion";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.planoDeMuebleToolStripMenuItem.Name = "planoDeMuebleToolStripMenuItem";
+            this.planoDeMuebleToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.planoDeMuebleToolStripMenuItem.Text = "Plano de Mueble";
+            this.planoDeMuebleToolStripMenuItem.Click += new System.EventHandler(this.planoDeMuebleToolStripMenuItem_Click);
             // 
-            // btnPlanoMueble
+            // mantenedoresToolStripMenuItem
             // 
-            this.btnPlanoMueble.Location = new System.Drawing.Point(66, 286);
-            this.btnPlanoMueble.Name = "btnPlanoMueble";
-            this.btnPlanoMueble.Size = new System.Drawing.Size(155, 23);
-            this.btnPlanoMueble.TabIndex = 5;
-            this.btnPlanoMueble.Text = "Plano de Mueble";
-            this.btnPlanoMueble.UseVisualStyleBackColor = true;
-            this.btnPlanoMueble.Click += new System.EventHandler(this.btnPlanoMueble_Click);
+            this.mantenedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.personalDeProduccionToolStripMenuItem,
+            this.procesoDeProduccionToolStripMenuItem,
+            this.muebleTerminadoToolStripMenuItem,
+            this.pedidoToolStripMenuItem});
+            this.mantenedoresToolStripMenuItem.Name = "mantenedoresToolStripMenuItem";
+            this.mantenedoresToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.mantenedoresToolStripMenuItem.Text = "Mantenedores";
+            // 
+            // personalDeProduccionToolStripMenuItem
+            // 
+            this.personalDeProduccionToolStripMenuItem.Name = "personalDeProduccionToolStripMenuItem";
+            this.personalDeProduccionToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.personalDeProduccionToolStripMenuItem.Text = "Personal de Produccion";
+            this.personalDeProduccionToolStripMenuItem.Click += new System.EventHandler(this.personalDeProduccionToolStripMenuItem_Click);
+            // 
+            // procesoDeProduccionToolStripMenuItem
+            // 
+            this.procesoDeProduccionToolStripMenuItem.Name = "procesoDeProduccionToolStripMenuItem";
+            this.procesoDeProduccionToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.procesoDeProduccionToolStripMenuItem.Text = "Proceso de Produccion";
+            this.procesoDeProduccionToolStripMenuItem.Click += new System.EventHandler(this.procesoDeProduccionToolStripMenuItem_Click);
+            // 
+            // muebleTerminadoToolStripMenuItem
+            // 
+            this.muebleTerminadoToolStripMenuItem.Name = "muebleTerminadoToolStripMenuItem";
+            this.muebleTerminadoToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.muebleTerminadoToolStripMenuItem.Text = "Mueble Terminado";
+            this.muebleTerminadoToolStripMenuItem.Click += new System.EventHandler(this.muebleTerminadoToolStripMenuItem_Click);
+            // 
+            // pedidoToolStripMenuItem
+            // 
+            this.pedidoToolStripMenuItem.Name = "pedidoToolStripMenuItem";
+            this.pedidoToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.pedidoToolStripMenuItem.Text = "Pedido";
+            this.pedidoToolStripMenuItem.Click += new System.EventHandler(this.pedidoToolStripMenuItem_Click);
+            // 
+            // consultasToolStripMenuItem
+            // 
+            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.consultasToolStripMenuItem.Text = "Consultas";
             // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnPlanoMueble);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(698, 308);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormPrincipal";
             this.Text = "Produccion de Muebles";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button btnPlanoMueble;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem transaccionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ordenDeProduccionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem planoDeMuebleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mantenedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem personalDeProduccionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem procesoDeProduccionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem muebleTerminadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pedidoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
     }
 }
 

@@ -39,7 +39,6 @@ namespace ProyectoMOANSO
             this.txtPlanoiID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BoxImagenPlano = new System.Windows.Forms.PictureBox();
-            this.dgvMaterialesPlano = new System.Windows.Forms.DataGridView();
             this.btnImagen = new System.Windows.Forms.Button();
             this.labelma = new System.Windows.Forms.Label();
             this.cmbMaterial = new System.Windows.Forms.ComboBox();
@@ -49,15 +48,15 @@ namespace ProyectoMOANSO
             this.txtMedidas = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.btnGrabarMateriales = new System.Windows.Forms.Button();
             this.gbPlanoMueble.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BoxImagenPlano)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMaterialesPlano)).BeginInit();
             this.gbMateriales.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNuevoPlano
             // 
-            this.btnNuevoPlano.Location = new System.Drawing.Point(539, 15);
+            this.btnNuevoPlano.Location = new System.Drawing.Point(424, 6);
             this.btnNuevoPlano.Name = "btnNuevoPlano";
             this.btnNuevoPlano.Size = new System.Drawing.Size(85, 23);
             this.btnNuevoPlano.TabIndex = 0;
@@ -74,7 +73,7 @@ namespace ProyectoMOANSO
             this.gbPlanoMueble.Controls.Add(this.label2);
             this.gbPlanoMueble.Controls.Add(this.txtPlanoiID);
             this.gbPlanoMueble.Controls.Add(this.label1);
-            this.gbPlanoMueble.Location = new System.Drawing.Point(22, 25);
+            this.gbPlanoMueble.Location = new System.Drawing.Point(12, 35);
             this.gbPlanoMueble.Name = "gbPlanoMueble";
             this.gbPlanoMueble.Size = new System.Drawing.Size(497, 110);
             this.gbPlanoMueble.TabIndex = 1;
@@ -141,24 +140,16 @@ namespace ProyectoMOANSO
             // 
             // BoxImagenPlano
             // 
-            this.BoxImagenPlano.Location = new System.Drawing.Point(539, 111);
+            this.BoxImagenPlano.Location = new System.Drawing.Point(529, 12);
             this.BoxImagenPlano.Name = "BoxImagenPlano";
             this.BoxImagenPlano.Size = new System.Drawing.Size(249, 290);
             this.BoxImagenPlano.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BoxImagenPlano.TabIndex = 2;
             this.BoxImagenPlano.TabStop = false;
             // 
-            // dgvMaterialesPlano
-            // 
-            this.dgvMaterialesPlano.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMaterialesPlano.Location = new System.Drawing.Point(22, 269);
-            this.dgvMaterialesPlano.Name = "dgvMaterialesPlano";
-            this.dgvMaterialesPlano.Size = new System.Drawing.Size(497, 169);
-            this.dgvMaterialesPlano.TabIndex = 3;
-            // 
             // btnImagen
             // 
-            this.btnImagen.Location = new System.Drawing.Point(613, 415);
+            this.btnImagen.Location = new System.Drawing.Point(414, 283);
             this.btnImagen.Name = "btnImagen";
             this.btnImagen.Size = new System.Drawing.Size(108, 23);
             this.btnImagen.TabIndex = 4;
@@ -201,7 +192,7 @@ namespace ProyectoMOANSO
             this.gbMateriales.Controls.Add(this.label5);
             this.gbMateriales.Controls.Add(this.labelma);
             this.gbMateriales.Controls.Add(this.cmbMaterial);
-            this.gbMateriales.Location = new System.Drawing.Point(22, 141);
+            this.gbMateriales.Location = new System.Drawing.Point(12, 151);
             this.gbMateriales.Name = "gbMateriales";
             this.gbMateriales.Size = new System.Drawing.Size(363, 109);
             this.gbMateriales.TabIndex = 10;
@@ -222,7 +213,7 @@ namespace ProyectoMOANSO
             // 
             this.txtMedidas.Location = new System.Drawing.Point(213, 73);
             this.txtMedidas.Name = "txtMedidas";
-            this.txtMedidas.Size = new System.Drawing.Size(41, 20);
+            this.txtMedidas.Size = new System.Drawing.Size(127, 20);
             this.txtMedidas.TabIndex = 10;
             // 
             // label4
@@ -242,14 +233,24 @@ namespace ProyectoMOANSO
             this.txtCantidad.Size = new System.Drawing.Size(41, 20);
             this.txtCantidad.TabIndex = 7;
             // 
+            // btnGrabarMateriales
+            // 
+            this.btnGrabarMateriales.Location = new System.Drawing.Point(393, 164);
+            this.btnGrabarMateriales.Name = "btnGrabarMateriales";
+            this.btnGrabarMateriales.Size = new System.Drawing.Size(110, 23);
+            this.btnGrabarMateriales.TabIndex = 11;
+            this.btnGrabarMateriales.Text = "Grabar Materiales";
+            this.btnGrabarMateriales.UseVisualStyleBackColor = true;
+            this.btnGrabarMateriales.Click += new System.EventHandler(this.btnGrabarMateriales_Click);
+            // 
             // PlanodeMueble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 321);
+            this.Controls.Add(this.btnGrabarMateriales);
             this.Controls.Add(this.gbMateriales);
             this.Controls.Add(this.btnImagen);
-            this.Controls.Add(this.dgvMaterialesPlano);
             this.Controls.Add(this.BoxImagenPlano);
             this.Controls.Add(this.gbPlanoMueble);
             this.Controls.Add(this.btnNuevoPlano);
@@ -258,7 +259,6 @@ namespace ProyectoMOANSO
             this.gbPlanoMueble.ResumeLayout(false);
             this.gbPlanoMueble.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BoxImagenPlano)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMaterialesPlano)).EndInit();
             this.gbMateriales.ResumeLayout(false);
             this.gbMateriales.PerformLayout();
             this.ResumeLayout(false);
@@ -270,7 +270,6 @@ namespace ProyectoMOANSO
         private System.Windows.Forms.Button btnNuevoPlano;
         private System.Windows.Forms.GroupBox gbPlanoMueble;
         private System.Windows.Forms.PictureBox BoxImagenPlano;
-        private System.Windows.Forms.DataGridView dgvMaterialesPlano;
         private System.Windows.Forms.DateTimePicker dTpFechaPlano;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPlanoiID;
@@ -287,5 +286,6 @@ namespace ProyectoMOANSO
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Button btnAnadir;
+        private System.Windows.Forms.Button btnGrabarMateriales;
     }
 }
