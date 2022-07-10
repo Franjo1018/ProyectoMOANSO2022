@@ -20,6 +20,7 @@ namespace ProyectoMOANSO
             InitializeComponent();
             listarMuebleTerminado();
             llenarDatosCBTipoTinte();
+            llenarDatosCBPlano();
             groupBoxDatos.Enabled = false;
             txtCodigoMueble.Enabled = false;
         }
