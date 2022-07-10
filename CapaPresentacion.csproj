@@ -58,12 +58,6 @@
     <Compile Include="MuebleTerminado.Designer.cs">
       <DependentUpon>MuebleTerminado.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrdenManufactura.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OrdenManufactura.Designer.cs">
-      <DependentUpon>OrdenManufactura.cs</DependentUpon>
-    </Compile>
     <Compile Include="Pedido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,11 +70,11 @@
     <Compile Include="PersonalProduccion.Designer.cs">
       <DependentUpon>PersonalProduccion.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrdenMantenimiento.cs">
+    <Compile Include="OrdenProduccion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrdenMantenimiento.Designer.cs">
-      <DependentUpon>OrdenMantenimiento.cs</DependentUpon>
+    <Compile Include="OrdenProduccion.Designer.cs">
+      <DependentUpon>OrdenProduccion.cs</DependentUpon>
     </Compile>
     <Compile Include="PlanodeMueble.cs">
       <SubType>Form</SubType>
@@ -114,8 +108,8 @@
     <EmbeddedResource Include="PersonalProduccion.resx">
       <DependentUpon>PersonalProduccion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrdenMantenimiento.resx">
-      <DependentUpon>OrdenMantenimiento.cs</DependentUpon>
+    <EmbeddedResource Include="OrdenProduccion.resx">
+      <DependentUpon>OrdenProduccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlanodeMueble.resx">
       <DependentUpon>PlanodeMueble.cs</DependentUpon>
@@ -132,6 +126,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RequerimientoMateriales.resx">
+      <DependentUpon>RequerimientoMateriales.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

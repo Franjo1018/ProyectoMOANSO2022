@@ -51,5 +51,11 @@ namespace ProyectoMOANSO
             PersonalProduccion f = new PersonalProduccion();
             f.Show();
         }
+
+        private void ordenDeProduccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OrdenProduccion f = new OrdenProduccion();
+            f.Show();
+        }
     }
 }

@@ -47,7 +47,7 @@ namespace ProyectoMOANSO
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(609, 265);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 30);
             this.button1.TabIndex = 0;
@@ -82,6 +82,7 @@ namespace ProyectoMOANSO
             this.ordenDeProduccionToolStripMenuItem.Name = "ordenDeProduccionToolStripMenuItem";
             this.ordenDeProduccionToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.ordenDeProduccionToolStripMenuItem.Text = "Orden de Produccion";
+            this.ordenDeProduccionToolStripMenuItem.Click += new System.EventHandler(this.ordenDeProduccionToolStripMenuItem_Click);
             // 
             // planoDeMuebleToolStripMenuItem
             // 
@@ -98,7 +99,7 @@ namespace ProyectoMOANSO
             this.muebleTerminadoToolStripMenuItem,
             this.pedidoToolStripMenuItem});
             this.mantenedoresToolStripMenuItem.Name = "mantenedoresToolStripMenuItem";
-            this.mantenedoresToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.mantenedoresToolStripMenuItem.Size = new System.Drawing.Size(95, 19);
             this.mantenedoresToolStripMenuItem.Text = "Mantenedores";
             // 
             // personalDeProduccionToolStripMenuItem
@@ -132,7 +133,7 @@ namespace ProyectoMOANSO
             // consultasToolStripMenuItem
             // 
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 19);
             this.consultasToolStripMenuItem.Text = "Consultas";
             // 
             // FormPrincipal
@@ -144,7 +145,7 @@ namespace ProyectoMOANSO
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPrincipal";
             this.Text = "Produccion de Muebles";
             this.menuStrip1.ResumeLayout(false);

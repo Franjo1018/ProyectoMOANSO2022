@@ -13,9 +13,9 @@ using CapaEntidad;
 
 namespace ProyectoMOANSO
 {
-    public partial class OrdenMantenimiento : Form
+    public partial class OrdenProduccion : Form
     {
-        public OrdenMantenimiento()
+        public OrdenProduccion()
         {
             InitializeComponent();
             listarProcesoMantenimiento();
@@ -33,7 +33,6 @@ namespace ProyectoMOANSO
             groupBoxDatos.Enabled = true;
             btnAgregar.Visible = true;
             LimpiarVariables();
-            btnModificar.Visible = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -60,10 +59,9 @@ namespace ProyectoMOANSO
 
         private void LimpiarVariables()
         {
-            txtTipoProceso.Text = "";
+
             txtProcedimiento.Text = " ";
-            txtDuracion.Text = " ";
-            txtDescripcion.Text = " ";
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -71,21 +69,11 @@ namespace ProyectoMOANSO
             LimpiarVariables();
         }
 
-        private void dgvProceso_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow filaActual = dgvProceso.Rows[e.RowIndex]; //
-            txtCodigoProceso.Text = filaActual.Cells[0].Value.ToString();
-            txtProcedimiento.Text = filaActual.Cells[1].Value.ToString();
-            txtDuracion.Text = filaActual.Cells[2].Value.ToString();
-            txtTipoProceso.Text = filaActual.Cells[3].Value.ToString();
-            txtDescripcion.Text = filaActual.Cells[4].Value.ToString();
-            dtPickerRegProceso.Text = filaActual.Cells[5].Value.ToString();
-        }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             groupBoxDatos.Enabled = true;
-            btnModificar.Visible = true;
+ 
             btnAgregar.Visible = false;
         }
 
@@ -132,6 +120,17 @@ namespace ProyectoMOANSO
             //LimpiarVariables();
             //groupBoxDatos.Enabled = false;
             //listarProcesoMantenimiento();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RequerimientoMateriales f = new RequerimientoMateriales();
+            f.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            groupBoxDatos.Enabled = true;
         }
     }
 }
